@@ -1,0 +1,1340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Faculty Directory | Department of Environmental Science & Engineering
+    </title>
+
+    <!-- Typography & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alien+Block&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+
+    <!-- Vendor CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.1.18/dist/lenis.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Custom Cursor Blob -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <main id="smooth-wrapper">
+      <!-- Hero Section -->
+      <section class="hero-section" id="overview">
+        <div class="hero-bg-glow"></div>
+        <div class="container hero-container">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            Department of Environmental Science & Engineering
+          </div>
+
+          <h1 class="hero-title">
+            <span class="title-line"><span>Meet Our Faculty</span></span>
+            <span class="title-line"
+              ><span class="text-gradient">Educators. Researchers. Mentors.</span></span
+            >
+          </h1>
+
+          <div class="hero-grid-footer">
+            <p class="hero-description">
+              Our faculty bring together expertise from across environmental science and engineering, creating a collaborative space for learning, research, and innovation. From mentoring students to addressing real-world environmental challenges, they are committed to making a meaningful impact inside and outside the classroom. Explore their profiles to learn more about their work, interests, and ongoing research.
+            </p>
+            <div class="hero-metrics">
+              <div class="metric-item">
+                <span class="metric-val" data-target="38">17</span
+                ><span class="metric-symbol">+</span>
+                <span class="metric-label">Resident Faculty</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val" data-target="14">5</span>
+                <span class="metric-label">Research Centers</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Faculty Directory Section -->
+      <section class="faculty-section" id="faculty">
+        <div class="container">
+          <!-- Interactive Controls -->
+          <div class="directory-controls">
+            <div class="filter-tabs"></div>
+
+            <div class="search-field">
+              <svg
+                class="search-icon"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input
+                type="text"
+                id="facultySearch"
+                placeholder="Search by name, room, or designation..."
+                autocomplete="off"
+              />
+            </div>
+          </div>
+
+          <!-- Faculty Directory Cards Layout -->
+          <div class="faculty-list" id="facultyList">
+            <!-- Card 1 (Featured Layout) -->
+            <article class="faculty-card featured" data-category="climate">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/C5103AQHNmmrNoutcLw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1518520902076?e=1787184000&v=beta&t=r13LxhmOrxEwNbLVEQEya3OxGckPH5fPadVDrPDM1BE"
+                    alt="Prof. Munish Chandel"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-ba   dge">Head of Department & Professor</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-FAC-01</span>
+                    <span class="category-pill"
+                      >Climate &amp; Carbon Policy</span
+                    >
+                  </div>
+
+                  <h2 class="faculty-name">Prof. Munish Chandel</h2>
+                  <p class="faculty-designation">
+                    Senior Professor &amp; Chair of Atmospheric Thermodynamics
+                  </p>
+
+                  <!-- Explicit Required Info Grid -->
+                  <div class="info-grid">
+                    <div class="info-item">
+                      <span class="info-label">Appointment</span>
+                      <span class="info-val">Core Faculty</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Room No.</span>
+                      <span class="info-val">DESE-411, 4th Floor</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+91-22-25767856" class="info-val link"
+                        >+91-22-25767856</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a
+                        href="mailto:munish.chandel@iitb.ac.in"
+                        class="info-val link"
+                        >munish.chandel@iitb.ac.in</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile &amp; Research</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="faculty-card" data-category="air-quality">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/D4D03AQE1kB5AVeX3Cw/profile-displayphoto-shrink_800_800/B4DZSUIj3CG8Ag-/0/1737652060255?e=1787184000&v=beta&t=Zl0La2QUsJoeW5NnwFSLFA7ODCiV6-2CqIKsDfvVRtw"
+                    alt="Prof. Anurag Garg"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-badge">Professor</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-FAC-02</span>
+                    <span class="category-pill">Air &amp; Aerosols</span>
+                  </div>
+
+                  <h2 class="faculty-name">Prof. Anurag Garg</h2>
+                  <p class="faculty-designation">
+                    Professor in Aerosol Science &amp; Industrial Emissions
+                  </p>
+
+                  <div class="info-grid">
+                    <div class="info-item">
+                      <span class="info-label">Appointment</span>
+                      <span class="info-val">Core Faculty</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Room No.</span>
+                      <span class="info-val">DESE-311, 3rd Floor</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+91-22-25767861" class="info-val link"
+                        >+91-22-25767861</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a
+                        href="mailto:a.garg@iitb.ac.in"
+                        class="info-val link"
+                        >a.garg@iitb.ac.in</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="faculty-card" data-category="water-tech">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM38uK_OUTpLNCV9p9qyB9yxd_rWVNhCUcSTYrlhgLGB48hzWLJiTSsxk&s=10"
+                    alt="Dr. Meera N. Bannerjee"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-badge">Assistant Professor</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-FAC-03</span>
+                    <span class="category-pill"
+                      >Water &amp; Circular Systems</span
+                    >
+                  </div>
+
+                  <h2 class="faculty-name">Prof. V. S. Vamsi Botlaguduru</h2>
+                  <p class="faculty-designation">
+                    Associate Professor in Membrane Process Engineering
+                  </p>
+
+                  <div class="info-grid">
+                    <div class="info-item">
+                      <span class="info-label">Appointment</span>
+                      <span class="info-val">Core Faculty</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Room No.</span>
+                      <span class="info-val">DESE-306, 3rd Floor</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+91-22-25765855" class="info-val link"
+                        >+91-22-25765855</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a
+                        href="mailto:vamsi.bvs@iitb.ac.in"
+                        class="info-val link"
+                        >vamsi.bvs@iitb.ac.in</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="faculty-card" data-category="water-tech">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://www.esed.iitb.ac.in/sites/www.esed.iitb.ac.in/files/styles/acad_fac_max_650x650/public/fac_images/Balasubramanian%2C%20Srinidhi_photo.jpg?itok=bxNFEyHe"
+                    alt="Dr. Meera N. Bannerjee"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-badge">Assistant Professor</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-FAC-03</span>
+                    <span class="category-pill"
+                      >Water &amp; Circular Systems</span
+                    >
+                  </div>
+
+                  <h2 class="faculty-name">Prof. Srinidhi Balasubramanian</h2>
+                  <p class="faculty-designation">
+                    Associate Professor in Membrane Process Engineering
+                  </p>
+
+                  <div class="info-grid">
+                    <div class="info-item">
+                      <span class="info-label">Appointment</span>
+                      <span class="info-val">Core Faculty</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Room No.</span>
+                      <span class="info-val">DESE-310, 3rd Floor</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+912225767812" class="info-val link"
+                        >+91-22-25765856</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a href="mailto:srinidhi@iitb.ac.in" class="info-val link"
+                        >srinidhi@iitb.ac.in</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="faculty-card" data-category="water-tech">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://www.esed.iitb.ac.in/sites/www.esed.iitb.ac.in/files/styles/acad_fac_max_650x650/public/fac_images/AC_0.JPG?itok=oEnn6071"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-badge">Assistant Professor</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-FAC-03</span>
+                    <span class="category-pill"
+                      >Water &amp; Circular Systems</span
+                    >
+                  </div>
+
+                  <h2 class="faculty-name">Prof. Abhishek Chakraborty</h2>
+                  <p class="faculty-designation">
+                    Associate Professor in Membrane Process Engineering
+                  </p>
+
+                  <div class="info-grid">
+                    <div class="info-item">
+                      <span class="info-label">Appointment</span>
+                      <span class="info-val">Core Faculty</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Room No.</span>
+                      <span class="info-val">DESE-408, 4th Floor</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+91-22-25765853" class="info-val link"
+                        >+91-22-25765853</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a
+                        href="mailto:abhishekc@iitb.ac.in"
+                        class="info-val link"
+                        >abhishekc@iitb.ac.in</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="faculty-card" data-category="water-tech">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://www.esed.iitb.ac.in/sites/www.esed.iitb.ac.in/files/styles/acad_fac_max_650x650/public/fac_images/IC.jpg?itok=nCU8QKg4"
+                    alt="Dr. Meera N. Bannerjee"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-badge">Assistant Professor</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-FAC-03</span>
+                    <span class="category-pill"
+                      >Water &amp; Circular Systems</span
+                    >
+                  </div>
+
+                  <h2 class="faculty-name">Prof. Indrajit Chakraborty</h2>
+                  <p class="faculty-designation">
+                    Associate Professor in Membrane Process Engineering
+                  </p>
+
+                  <div class="info-grid">
+                    <div class="info-item">
+                      <span class="info-label">Appointment</span>
+                      <span class="info-val">Core Faculty</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Room No.</span>
+                      <span class="info-val">DESE-208, 2nd Floor</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+91-22-25767143" class="info-val link"
+                        >+91-22-25767143</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a
+                        href="mailto:indra.esed@iitb.ac.in"
+                        class="info-val link"
+                        >	indra.esed@iitb.ac.in</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="faculty-card" data-category="climate">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://www.esed.iitb.ac.in/sites/www.esed.iitb.ac.in/files/styles/acad_fac_max_650x650/public/fac_images/SKC.jpg?itok=jIVgGWDn"
+                    alt="Dr. Tariq Al-Mansoor"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-badge">Professor</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-FAC-04</span>
+                    <span class="category-pill"
+                      >Climate &amp; Carbon Policy</span
+                    >
+                  </div>
+
+                  <h2 class="faculty-name">Prof. Sanjeev Chaudhari</h2>
+                  <p class="faculty-designation">
+                    Assistant Professor in Net-Zero Campus Systems
+                  </p>
+
+                  <div class="info-grid">
+                    <div class="info-item">
+                      <span class="info-label">Appointment</span>
+                      <span class="info-val"
+                        >Core Faculty</span
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Room No.</span>
+                      <span class="info-val">DESE-305, 3rd Floor</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+91-22-25767855" class="info-val link"
+                        >+91-22-25767855</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a
+                        href="mailto:sanjeev@iitb.ac.in"
+                        class="info-val link"
+                        >sanjeev@iitb.ac.in</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="faculty-card" data-category="climate">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://www.esed.iitb.ac.in/sites/www.esed.iitb.ac.in/files/styles/acad_fac_max_650x650/public/fac_images/AKD.jpg?itok=L4HeZTHY"
+                    alt="Dr. Tariq Al-Mansoor"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-badge"> Professor</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-FAC-04</span>
+                    <span class="category-pill"
+                      >Climate &amp; Carbon Policy</span
+                    >
+                  </div>
+
+                  <h2 class="faculty-name">Prof. Anil Kumar Dikshit</h2>
+                  <p class="faculty-designation">
+                    Assistant Professor in Net-Zero Campus Systems
+                  </p>
+
+                  <div class="info-grid">
+                    <div class="info-item">
+                      <span class="info-label">Appointment</span>
+                      <span class="info-val"
+                        >Core Faculty</span
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Room No.</span>
+                      <span class="info-val">DESE-410, 4th Floor</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+91-22-25767862" class="info-val link"
+                        >+91-22-25767862</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a
+                        href="mailto:dikshit@iitb.ac.in"
+                        class="info-val link"
+                        >dikshit@iitb.ac.in</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="faculty-card" data-category="climate">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://www.esed.iitb.ac.in/sites/www.esed.iitb.ac.in/files/styles/acad_fac_max_650x650/public/fac_images/Pradip-Kalbar_0.jpg?itok=ELgWgtxe"
+                    alt="Dr. Tariq Al-Mansoor"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-badge">Professor</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-FAC-04</span>
+                    <span class="category-pill"
+                      >Climate &amp; Carbon Policy</span
+                    >
+                  </div>
+
+                  <h2 class="faculty-name">Prof. Pradip Kalbar</h2>
+                  <p class="faculty-designation">
+                    Assistant Professor in Net-Zero Campus Systems
+                  </p>
+
+                  <div class="info-grid">
+                    <div class="info-item">
+                      <span class="info-label">Appointment</span>
+                      <span class="info-val"
+                        >Core Faculty</span
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Room No.</span>
+                      <span class="info-val">DESE-308, 3rd Floor</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+91-22-25769330" class="info-val link"
+                        >+91-22-25769330</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a
+                        href="mailto:kalbar@iitb.ac.in"
+                        class="info-val link"
+                        >kalbar@iitb.ac.in</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="faculty-card" data-category="climate">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://www.esed.iitb.ac.in/sites/www.esed.iitb.ac.in/files/styles/acad_fac_max_650x650/public/fac_images/SK.jpg?itok=_EsI80Zc"
+                    alt="Dr. Tariq Al-Mansoor"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-badge">Professor</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-FAC-04</span>
+                    <span class="category-pill"
+                      >Climate &amp; Carbon Policy</span
+                    >
+                  </div>
+
+                  <h2 class="faculty-name">Prof. Subhankar Karmakar</h2>
+                  <p class="faculty-designation">
+                    Assistant Professor in Net-Zero Campus Systems
+                  </p>
+
+                  <div class="info-grid">
+                    <div class="info-item">
+                      <span class="info-label">Appointment</span>
+                      <span class="info-val"
+                        >Core Faculty</span
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Room No.</span>
+                      <span class="info-val">DESE-207, 2nd Floor</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+91-22-25767857" class="info-val link"
+                        >+91-22-25767857</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a
+                        href="mailto:subhankar.karmakar@gmail.com"
+                        class="info-val link"
+                        >subhankar.karmakar@gmail.com</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="faculty-card" data-category="climate">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://www.esed.iitb.ac.in/sites/www.esed.iitb.ac.in/files/styles/acad_fac_max_650x650/public/fac_images/Suparna_photo.jpg?itok=kKjhTcKs"
+                    alt="Dr. Tariq Al-Mansoor"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-badge">Professor</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-FAC-04</span>
+                    <span class="category-pill"
+                      >Climate &amp; Carbon Policy</span
+                    >
+                  </div>
+
+                  <h2 class="faculty-name">Prof. Suparna Mukherji</h2>
+                  <p class="faculty-designation">
+                    Assistant Professor in Net-Zero Campus Systems
+                  </p>
+
+                  <div class="info-grid">
+                    <div class="info-item">
+                      <span class="info-label">Appointment</span>
+                      <span class="info-val"
+                        >Core Faculty</span
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Room No.</span>
+                      <span class="info-val">DESE-513, 5th Floor</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+91-22-25767854" class="info-val link"
+                        >+91-22-25767854</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a
+                        href="mailto:mitras@iitb.ac.in,"
+                        class="info-val link"
+                        >mitras@iitb.ac.in,</a
+                      >
+                      <a
+                        href="mailto:mukherji.suparna@gmail.com"
+                        class="info-val link"
+                        >mukherji.suparna@gmail.com</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="faculty-card" data-category="climate">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://www.esed.iitb.ac.in/sites/www.esed.iitb.ac.in/files/styles/acad_fac_max_650x650/public/fac_images/HarishPhuleria1.jpg?itok=saKMebbe"
+                    alt="Dr. Tariq Al-Mansoor"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-badge">Professor</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-FAC-04</span>
+                    <span class="category-pill"
+                      >Climate &amp; Carbon Policy</span
+                    >
+                  </div>
+
+                  <h2 class="faculty-name">Prof. Harish Phuleria</h2>
+                  <p class="faculty-designation">
+                    Assistant Professor in Net-Zero Campus Systems
+                  </p>
+
+                  <div class="info-grid">
+                    <div class="info-item">
+                      <span class="info-label">Appointment</span>
+                      <span class="info-val"
+                        >Core Faculty</span
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Room No.</span>
+                      <span class="info-val">DESE-406, 4th Floor</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+91-22-25765851" class="info-val link"
+                        >+91-22-25765851</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a
+                        href="mailto:phuleria@iitb.ac.in"
+                        class="info-val link"
+                        >phuleria@iitb.ac.in</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="faculty-card" data-category="climate">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://www.esed.iitb.ac.in/sites/www.esed.iitb.ac.in/files/styles/acad_fac_max_650x650/public/fac_images/MS.jpg?itok=3RtLYxTH"
+                    alt="Dr. Tariq Al-Mansoor"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-badge">Associate Professor</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-FAC-04</span>
+                    <span class="category-pill"
+                      >Climate &amp; Carbon Policy</span
+                    >
+                  </div>
+
+                  <h2 class="faculty-name">Prof. Manoranjan Sahu</h2>
+                  <p class="faculty-designation">
+                    Assistant Professor in Net-Zero Campus Systems
+                  </p>
+
+                  <div class="info-grid">
+                    <div class="info-item">
+                      <span class="info-label">Appointment</span>
+                      <span class="info-val"
+                        >Core Faculty</span
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Room No.</span>
+                      <span class="info-val">DESE-507, 5th Floor</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+912225767825" class="info-val link"
+                        >+91-22-25765852</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a
+                        href="mailto:mrsahu@iitb.ac.in"
+                        class="info-val link"
+                        >mrsahu@iitb.ac.in</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="faculty-card" data-category="climate">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://www.esed.iitb.ac.in/sites/www.esed.iitb.ac.in/files/styles/acad_fac_max_650x650/public/fac_images/as_0.jpg?itok=V_tQOjJg"
+                    alt="Dr. Tariq Al-Mansoor"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-badge">Associate Professor</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-FAC-04</span>
+                    <span class="category-pill"
+                      >Climate &amp; Carbon Policy</span
+                    >
+                  </div>
+
+                  <h2 class="faculty-name">Prof. Amritanshu Shriwastav</h2>
+                  <p class="faculty-designation">
+                    Assistant Professor in Net-Zero Campus Systems
+                  </p>
+
+                  <div class="info-grid">
+                    <div class="info-item">
+                      <span class="info-label">Appointment</span>
+                      <span class="info-val"
+                        >Core Faculty</span
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Room No.</span>
+                      <span class="info-val">DESE-512, 5th Floor</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+91-22-25767858" class="info-val link"
+                        >+91-22-25767858</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a
+                        href="mailto:amritan@iitb.ac.in"
+                        class="info-val link"
+                        >amritan@iitb.ac.in</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="faculty-card" data-category="climate">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://www.esed.iitb.ac.in/sites/www.esed.iitb.ac.in/files/styles/acad_fac_max_650x650/public/fac_images/renukaverma.jpg?itok=QukTarpw"
+                    alt="Dr. Tariq Al-Mansoor"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-badge">Assistant Professor</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-FAC-04</span>
+                    <span class="category-pill"
+                      >Climate &amp; Carbon Policy</span
+                    >
+                  </div>
+
+                  <h2 class="faculty-name">Prof. Renuka Verma</h2>
+                  <p class="faculty-designation">
+                    Assistant Professor in Net-Zero Campus Systems
+                  </p>
+
+                  <div class="info-grid">
+                    <div class="info-item">
+                      <span class="info-label">Appointment</span>
+                      <span class="info-val"
+                        >Assistant Professor (Grade I)</span
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Room No.</span>
+                      <span class="info-val">DESE-506, 5th Floor</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+91-22-25765857" class="info-val link"
+                        >+91-22-25765857</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a
+                        href="mailto:renukaverma@iitb.ac.in"
+                        class="info-val link"
+                        >renukaverma@iitb.ac.in</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="faculty-card" data-category="climate">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://www.esed.iitb.ac.in/sites/www.esed.iitb.ac.in/files/styles/acad_fac_max_650x650/public/fac_images/IMG_0150_0.JPG?itok=yD1moZKg"
+                    alt="Dr. Tariq Al-Mansoor"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-badge">Associate Professor</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-FAC-04</span>
+                    <span class="category-pill"
+                      >Climate &amp; Carbon Policy</span
+                    >
+                  </div>
+
+                  <h2 class="faculty-name">Prof. Swatantra Pratap Singh</h2>
+                  <p class="faculty-designation">
+                    Assistant Professor in Net-Zero Campus Systems
+                  </p>
+
+                  <div class="info-grid">
+                    <div class="info-item">
+                      <span class="info-label">Appointment</span>
+                      <span class="info-val"
+                        >Core Faculty</span
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Room No.</span>
+                      <span class="info-val">DESE-405, 4th Floor</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+91-22-25767859" class="info-val link"
+                        >+91-22-25767859</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a
+                        href="mailto:swatantra@iitb.ac.in"
+                        class="info-val link"
+                        >swatantra@iitb.ac.in</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="faculty-card" data-category="climate">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://www.esed.iitb.ac.in/sites/www.esed.iitb.ac.in/files/styles/acad_fac_max_650x650/public/fac_images/TN.jpg?itok=w7EEZv8P"
+                    alt="Dr. Tariq Al-Mansoor"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-badge">Associate Professor</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-FAC-04</span>
+                    <span class="category-pill"
+                      >Climate &amp; Carbon Policy</span
+                    >
+                  </div>
+
+                  <h2 class="faculty-name">Prof. Tabish Nawaz</h2>
+                  <p class="faculty-designation">
+                    Assistant Professor in Net-Zero Campus Systems
+                  </p>
+
+                  <div class="info-grid">
+                    <div class="info-item">
+                      <span class="info-label">Appointment</span>
+                      <span class="info-val"
+                        >Core Faculty</span
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Room No.</span>
+                      <span class="info-val">DESE-605, 6th Floor</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+91-22-25765854" class="info-val link"
+                        >+91-22-25765854</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a
+                        href="mailto:	tnawaz  @iitb.ac.in"
+                        class="info-val link"
+                        >	tnawaz@iitb.ac.in</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container footer-grid">
+        <div class="footer-brand-col">
+          <div class="brand-logo">
+            <span class="logo-mark">◇</span>
+            <span class="logo-text">DESE <span>/ IITB</span></span>
+          </div>
+          <p>
+            Department of Environmental Science &amp; Engineering.<br />Pioneering
+            sustainable technical frontiers.
+          </p>
+        </div>
+        <div class="footer-links-col">
+          <h4>Directory Links</h4>
+          <a href="#">Academic Chairs</a>
+          <a href="#">Postdoctoral Fellows</a>
+          <a href="#">Emeritus Faculty</a>
+          <a href="#">Administrative Office</a>
+        </div>
+        <div class="footer-links-col">
+          <h4>Department Contact</h4>
+          <p>Office Room 101, DESE Main Building</p>
+          <p>Phone: +91 (022) 2576-7800</p>
+          <p>Email: head.dese@iitb.ac.in</p>
+        </div>
+      </div>
+      <div class="footer-bottom container">
+        <p>
+          &copy; 2026 Department of Environmental Science &amp; Engineering. All
+          Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- GSAP & Lenis Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+    <!-- Lenis Smooth Scroll CDN (Best compatibility with GSAP ScrollTrigger) -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  </body>
+</html>
