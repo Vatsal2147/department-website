@@ -9,8 +9,8 @@
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-active: rgb(30, 113, 52);
   
-  --accent-emerald: #03f90f;
-  --accent-cyan: #09f311;
+  --accent-emerald: #07da2e;
+  --accent-cyan: #09ef10;
   --accent-amber: #ffb703;
   
   --text-main: #f3f5f9;
@@ -28,6 +28,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+*::selection{
+  background-color: #05d310;
+  color: white;
 }
 
 html {
@@ -54,8 +59,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   background: var(--accent-emerald);
   border-radius: 50%;
   pointer-events: none;
@@ -213,6 +218,11 @@ body {
   line-height: 1.05;
   letter-spacing: -0.03em;
   margin-bottom: 3.5rem;
+}
+
+.title-line::selection{
+  background-color: #03f90f;
+  color: white;
 }
 
 .title-line {
