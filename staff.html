@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Staff Directory | Department of Environmental Science & Engineering
+    </title>
+
+    <!-- Typography & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alien+Block&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+
+    <!-- Vendor CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.1.18/dist/lenis.css"
+    />
+    <link rel="stylesheet" href="./css/staff.css" />
+  </head>
+  <body>
+    <!-- Custom Cursor Blob -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <main id="smooth-wrapper">
+      <!-- Hero Section -->
+      <section class="hero-section" id="overview">
+        <div class="hero-bg-glow"></div>
+        <div class="container hero-container">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            Department of Environmental Science & Engineering
+          </div>
+
+          <h1 class="hero-title">
+            <span class="title-line"><span>Meet The Staff</span></span>
+            <span class="title-line"
+              ><span class="text-gradient">The backbone of our department's daily operations.</span></span
+            >
+          </h1>
+
+          <div class="hero-grid-footer">
+            <p class="hero-description">
+              Meet the people who make it all happen. Our staff work behind the scenes every day to support students, faculty, and the department's activities. Whether it's managing laboratories, handling administration, or ensuring everything runs seamlessly, their contributions are invaluable to our community.
+            </p>
+            <div class="hero-metrics">
+              <div class="metric-item">
+                <span class="metric-val" data-target="17">0</span
+                ><span class="metric-symbol">+</span>
+                <span class="metric-label">Resident Faculty</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val" data-target="5">0</span>
+                <span class="metric-label">Research Centers</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Staff Directory Section -->
+      <section class="faculty-section" id="faculty">
+        <div class="container">
+          <!-- Interactive Controls -->
+          <div class="directory-controls">
+            <div class="filter-tabs"></div>
+
+            
+          </div>
+
+          <!-- Staff Directory Cards Layout -->
+          <div class="faculty-list" id="facultyList">
+
+            <!-- Card 1 -->
+            <article class="faculty-card" data-category="water-tech">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://www.esed.iitb.ac.in/sites/www.esed.iitb.ac.in/files/styles/iitb_staff_max_325x325/public/staff_image/2022-02/Nancy%20PP%20photo123.jpg?itok=H9qiwUid"
+                    alt="Nancy Rodrigues"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-badge">Administrative Superintendent</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-STAFF-01</span>
+                    
+                  </div>
+
+                  <h2 class="faculty-name">Nancy Rodrigues</h2>
+                  
+
+                  <div class="info-grid">
+                    
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+91-22-25767851" class="info-val link"
+                        >+91-22-25767851/52</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a
+                        href="mailto:rdnancy@iitb.ac.in"
+                        class="info-val link"
+                        >rdnancy@iitb.ac.in</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="faculty-card" data-category="water-tech">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://www.esed.iitb.ac.in/sites/www.esed.iitb.ac.in/files/styles/iitb_staff_max_325x325/public/staff_image/2026-01/Ashwini%20Tare.jpg?itok=h6v-2DzN"
+                    alt="Ashwini Tare"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-badge">Administrative Assistant</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-STAFF-02</span>
+                    
+                  </div>
+
+                  <h2 class="faculty-name">Ashwini Tare</h2>
+                  <p class="faculty-designation">
+                    Administrative Assistant
+                  </p>
+
+                  <div class="info-grid">
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+91-22-25767851" class="info-val link"
+                        >+91-22-25767851/52</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a href="mailto:ashwini_koli@iitb.ac.in" class="info-val link"
+                        >ashwini_koli@iitb.ac.in</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="faculty-card" data-category="water-tech">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/D4D03AQFT-GOQnns_Ww/profile-displayphoto-crop_800_800/B4DZ3ehTUNJYAI-/0/1777554767093?e=1787184000&v=beta&t=7FBpWZgr_TEMs938b7npXRlZkO-9FMK2lg14baM8Jwg"
+                    alt="Pournima Masram"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-badge">Jr. Administrative Assistant</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-STAFF-03</span>
+                    
+                  </div>
+
+                  <h2 class="faculty-name">Pournima Masram</h2>
+                 
+
+                  <div class="info-grid">
+                   
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+91-22-25767851" class="info-val link"
+                        >+91-22-25767851/52</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a
+                        href="mailto:pournima14@iitb.ac.in"
+                        class="info-val link"
+                        >pournima14@iitb.ac.in</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="faculty-card" data-category="water-tech">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://www.esed.iitb.ac.in/sites/www.esed.iitb.ac.in/files/styles/iitb_staff_max_325x325/public/staff_image/2026-01/Tushar%20%281%29.jpg?itok=lbGQTTyZ"
+                    alt="Tushar Ingle"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-badge">Jr. Administrative Assistant</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-STAFF-04</span>
+                    
+                  </div>
+
+                  <h2 class="faculty-name">Tushar Ingle</h2>
+                  
+
+                  <div class="info-grid">
+                    
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+91-22-25767851" class="info-val link"
+                        >+91-22-25767851/52</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a
+                        href="mailto:itushar@iitb.ac.in"
+                        class="info-val link"
+                        >itushar@iitb.ac.in</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="faculty-card" data-category="climate">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://www.esed.iitb.ac.in/sites/www.esed.iitb.ac.in/files/styles/iitb_staff_max_325x325/public/staff_image/2026-01/anita.png?itok=ak0lQmIP"
+                    alt="Anita Kamble"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-badge">Multi-Skilled Assistant A</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-STAFF-05</span>
+                    
+                  </div>
+
+                  <h2 class="faculty-name">Anita Kamble</h2>
+                  
+
+                  <div class="info-grid">
+                    
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+91-22-21593825" class="info-val link"
+                        >+91-22-21593825</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a
+                        href="mailto:20003431@iitb.ac.in"
+                        class="info-val link"
+                        >20003431@iitb.ac.in</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="faculty-card" data-category="climate">
+              <div class="card-inner">
+                <div class="card-media">
+                  <img
+                    src="https://www.esed.iitb.ac.in/sites/www.esed.iitb.ac.in/files/styles/iitb_staff_max_325x325/public/staff_image/2026-01/rbagawane%20%281%29.jpg?itok=i0sRmpPJ"
+                    alt="Rajendra Agawane"
+                    class="faculty-img"
+                    loading="lazy"
+                  />
+                  <span class="appointment-badge">Office Staff</span>
+                </div>
+                <div class="card-content">
+                  <div class="card-header">
+                    <span class="faculty-id">DESE-STAFF-06</span>
+                  </div>
+
+                  <h2 class="faculty-name">Rajendra Agawane</h2>
+                  
+
+                  <div class="info-grid">
+                   
+                    <div class="info-item">
+                      <span class="info-label">Phone Nos.</span>
+                      <a href="tel:+91-22-25767851" class="info-val link"
+                        >+91-22-25767851/52</a
+                      >
+                    </div>
+                    <div class="info-item">
+                      <span class="info-label">Email</span>
+                      <a
+                        href="mailto:rbagawane@iitb.ac.in"
+                        class="info-val link"
+                        >rbagawane@iitb.ac.in</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="btn-profile">
+                      <span>Full Profile</span>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container footer-grid">
+        <div class="footer-brand-col">
+          <div class="brand-logo">
+            <span class="logo-mark">◇</span>
+            <span class="logo-text">ESED <span>/ IITB</span></span>
+          </div>
+          <p>
+            Department of Environmental Science &amp; Engineering.<br />Pioneering
+            sustainable technical frontiers and building a future where science meets sustainability. Our department brings together students, researchers, and faculty to explore environmental challenges, create innovative solutions, and make a lasting impact on society.
+          </p>
+        </div>
+        <div class="footer-links-col">
+          <h4>Directory Links</h4>
+          <a href="#">Academic Chairs</a>
+          <a href="#">Postdoctoral Fellows</a>
+          <a href="#">Emeritus Faculty</a>
+          <a href="#">Administrative Office</a>
+        </div>
+        <div class="footer-links-col">
+          <h4>Department Contact</h4>
+          <p>Office Room 101, DESE Main Building</p>
+          <p>Phone: +91 (022) 2576-7800</p>
+          <p>Email: head.dese@iitb.ac.in</p>
+        </div>
+      </div>
+      <div class="footer-bottom container">
+        <p>
+          &copy; 2026 Department of Environmental Science &amp; Engineering. All
+          Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- GSAP & Lenis Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="./js/staff.js"></script>
+    <!-- Lenis Smooth Scroll CDN (Best compatibility with GSAP ScrollTrigger) -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  </body>
+</html>
