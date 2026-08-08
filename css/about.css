@@ -49,6 +49,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+img{
+  position: fixed;
+  top:10;
+  left: 125px;
+  height: 50px;
+  width: 50px;
+ 
+}
+
 /* Custom Selection */
 ::selection {
   background-color: var(--accent-green);
@@ -332,7 +341,7 @@ body.hovering .custom-cursor-follower {
 .hero-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 }
 
@@ -375,8 +384,11 @@ body.hovering .custom-cursor-follower {
 }
 
 .hero-title-accent {
+  position: relative;
+  left:25%;
   color:#07da2e;
   display: block;
+  align-self: center;
 }
 
 .hero-subtitle {
@@ -384,6 +396,7 @@ body.hovering .custom-cursor-follower {
   font-weight: 400;
   color: var(--text-main);
   margin-bottom: 1rem;
+  align-self: center;
 }
 
 .hero-tagline {
@@ -391,6 +404,7 @@ body.hovering .custom-cursor-follower {
   color: var(--text-muted);
   max-width: 600px;
   margin-bottom: 4rem;
+  align-self: center;
 }
 
 .scroll-indicator {
@@ -427,6 +441,427 @@ body.hovering .custom-cursor-follower {
   0% { opacity: 1; transform: translate(-50%, 0); }
   100% { opacity: 0; transform: translate(-50%, 12px); }
 }
+
+
+/* =====================================================
+   ESED — NEWS & EVENTS CARD
+===================================================== */
+
+.news-events-card {
+
+    width: 477px;
+    height: 510px;
+
+    background: rgba(13, 21, 18, 0.88);
+
+    border: 1px solid rgba(132, 166, 150, 0.16);
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    color: #f1f5f2;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    position: relative;
+
+    box-sizing: border-box;
+
+    font-family: inherit;
+
+}
+
+
+/* subtle green glow */
+
+.news-events-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -100px;
+    top: -100px;
+
+    background: rgba(0, 255, 60, 0.055);
+
+    filter: blur(50px);
+
+    pointer-events: none;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.news-events-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.news-events-label {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 10px;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+
+    color: #00e83a;
+
+}
+
+
+.news-events-header h3 {
+
+    margin: 0;
+
+    font-size: 28px;
+
+    line-height: 1.05;
+
+    font-weight: 600;
+
+    letter-spacing: -0.025em;
+
+}
+
+
+.news-view-all {
+
+    color: #8da49a;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    margin-top: 5px;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+.news-view-all:hover {
+
+    color: #00ff3c;
+
+    transform: translateX(3px);
+
+}
+
+
+/* =====================================================
+   TABS
+===================================================== */
+
+.news-tabs {
+
+    display: flex;
+
+    gap: 7px;
+
+    margin-top: 25px;
+
+    padding-bottom: 13px;
+
+    border-bottom: 1px solid rgba(132, 166, 150, 0.12);
+
+}
+
+
+.news-tab {
+
+    border: none;
+
+    background: transparent;
+
+    color: #71847b;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    padding: 5px 12px;
+
+    border-radius: 100px;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease;
+
+}
+
+
+.news-tab:hover {
+
+    color: #d8e2dc;
+
+}
+
+
+.news-tab.active {
+
+    color: #00ff3c;
+
+    background: rgba(0, 255, 60, 0.07);
+
+}
+
+
+/* =====================================================
+   NEWS LIST
+===================================================== */
+
+.news-items {
+    height: 285px;
+    min-height: 285px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    margin-top: 3px;
+
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 255, 60, 0.3) transparent;
+
+    /* Important */
+    overscroll-behavior: contain;
+}
+
+
+/* Chrome scrollbar */
+
+.news-items::-webkit-scrollbar {
+    width: 3px;
+}
+
+.news-items::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.news-items::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 60, 0.3);
+    border-radius: 20px;
+}
+
+
+/* =====================================================
+   INDIVIDUAL NEWS ITEM
+===================================================== */
+
+.news-item {
+    display: grid;
+    grid-template-columns: 78px 1fr;
+    gap: 17px;
+
+    padding: 16px 4px;
+
+    border-bottom: 1px solid rgba(132, 166, 150, 0.11);
+
+    text-decoration: none;
+    color: inherit;
+
+    transition:
+        background 0.25s ease,
+        padding-left 0.25s ease;
+}
+
+
+.news-item:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.news-item:hover {
+
+    background: rgba(0, 255, 60, 0.025);
+
+    padding-left: 9px;
+
+}
+
+
+/* =====================================================
+   DATE
+===================================================== */
+
+.news-date {
+
+    font-size: 10px;
+
+    line-height: 1.4;
+
+    color: #667a70;
+
+    letter-spacing: 0.04em;
+
+    padding-top: 2px;
+
+}
+
+
+/* =====================================================
+   ITEM CONTENT
+===================================================== */
+
+.news-item-type {
+
+    font-size: 8px;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+
+    color: #00df36;
+
+    margin-bottom: 7px;
+
+}
+
+
+.news-item-title {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.35;
+
+    font-weight: 500;
+
+    color: #e9efeb;
+
+}
+
+
+.news-item-description {
+
+    margin: 6px 0 0;
+
+    font-size: 10.5px;
+
+    line-height: 1.45;
+
+    color: #82948b;
+
+}
+
+
+/* arrow */
+
+.news-arrow {
+
+    display: inline-block;
+
+    margin-left: 5px;
+
+    color: #00ff3c;
+
+    transition: transform 0.25s ease;
+
+}
+
+
+.news-item:hover .news-arrow {
+
+    transform: translateX(4px);
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.news-footer {
+
+    padding-top: 15px;
+
+    margin-top: 5px;
+
+    border-top: 1px solid rgba(132, 166, 150, 0.11);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: #506159;
+
+    font-size: 9px;
+
+    letter-spacing: 0.05em;
+
+}
+
+
+.news-status-dot {
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #00ff3c;
+
+    box-shadow:
+        0 0 8px rgba(0, 255, 60, 0.5);
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .news-events-card {
+
+        width: 100%;
+
+        max-width: 477px;
+
+        height: 510px;
+
+        padding: 25px;
+
+    }
+
+}
+
 
 /* 7. WHO WE ARE & EDITORIAL STYLES */
 .editorial-grid {
@@ -1045,6 +1480,21 @@ body.hovering .custom-cursor-follower {
     gap: 0.5rem;
     text-align: center;
   }
+
+  /* Quick Hero Centering Override */
+#hero .hero-container {
+  align-items: center !important;
+  text-align: center !important;
+}
+
+#hero .hero-tagline {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+#hero .scroll-indicator {
+  margin: 0 auto !important;
+}
 }
 
 /* 18. ACCESSIBILITY (Reduced Motion) */

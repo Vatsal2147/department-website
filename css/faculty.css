@@ -120,6 +120,8 @@ body {
 }
 
 .brand-logo {
+  position: fixed;
+  left: 140px;
   display: flex;
   align-items: center;
   gap: 0.6rem;

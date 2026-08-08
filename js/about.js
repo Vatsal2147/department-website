@@ -173,6 +173,197 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+    
+  const newsData = [
+
+    {
+        type: "news",
+
+        date: "11 SEP 2025",
+
+        title:
+            "Class of 1973 Faculty Award for Research Excellence 2025",
+
+        description:
+            "Faculty members of ESED were recognised with the Class of 1973 Faculty Award for Research Excellence.",
+
+        url:
+            "https://www.esed.iitb.ac.in/news/class-1973-faculty-award-research-excellence-2025"
+    },
+
+    {
+        type: "news",
+
+        date: "11 SEP 2025",
+
+        title:
+            "Departmental Award for Excellence in Teaching",
+
+        description:
+            "Prof. Swatantra Pratap Singh received the Departmental Award for Excellence in Teaching.",
+
+        url:
+            "https://www.esed.iitb.ac.in/news/departmental-award-excellence-teaching-prof-swatantra-pratap-singh"
+    },
+
+    {
+        type: "news",
+
+        date: "11 SEP 2025",
+
+        title:
+            "Congratulations to Prof. Subhankar Karmakar",
+
+        description:
+            "Prof. Subhankar Karmakar was elected as a Fellow of the Indian National Academy of Engineering.",
+
+        url:
+            "https://www.esed.iitb.ac.in/news/congratulations-prof-subhankar-karmakar"
+    },
+
+    {
+        type: "news",
+
+        date: "28 AUG 2024",
+
+        title:
+            "Research Excellence Award to Prof. Harish Phuleria",
+
+        description:
+            "Prof. Harish Phuleria received the Research Excellence Award for 2024.",
+
+        url:
+            "https://www.esed.iitb.ac.in/index.php/news/research-excellence-award-prof-harish-phuleria"
+    },
+
+
+    /* EVENTS */
+
+    {
+        type: "events",
+
+        date: "05 JUN 2026",
+
+        title:
+            "World Environment Day 2026",
+
+        description:
+            "Environmental awareness and sustainability focused activities organised by ESED.",
+
+        url:
+            "https://www.esed.iitb.ac.in/event/world-environment-day-2026"
+    },
+
+    {
+        type: "events",
+
+        date: "13–14 MAR 2026",
+
+        title:
+            "5th National Environmental Conference (NEC-2026)",
+
+        description:
+            "A national conference bringing together researchers and professionals working across environmental disciplines.",
+
+        url:
+            "https://www.esed.iitb.ac.in/event/5th-national-environmental-conference-nec-2026"
+    }
+
+];
+
+
+const newsContainer =
+    document.getElementById("newsItems");
+
+const tabs =
+    document.querySelectorAll(".news-tab");
+
+
+function renderNews(type = "news") {
+
+    newsContainer.innerHTML = "";
+
+    const filtered =
+        newsData.filter(item => item.type === type);
+
+
+    filtered.forEach(item => {
+
+        const link =
+            document.createElement("a");
+
+        link.className = "news-item";
+
+        link.href = item.url;
+
+        link.target = "_blank";
+
+        link.rel = "noopener noreferrer";
+
+
+        link.innerHTML = `
+
+            <div class="news-date">
+                ${item.date}
+            </div>
+
+            <div>
+
+                <div class="news-item-type">
+                    ${item.type === "news" ? "News" : "Event"}
+                </div>
+
+                <h4 class="news-item-title">
+                    ${item.title}
+                    <span class="news-arrow">↗</span>
+                </h4>
+
+                <p class="news-item-description">
+                    ${item.description}
+                </p>
+
+            </div>
+
+        `;
+
+
+        newsContainer.appendChild(link);
+
+    });
+
+}
+
+
+/* TAB SWITCHING */
+
+tabs.forEach(tab => {
+
+    tab.addEventListener("click", () => {
+
+        tabs.forEach(item => {
+
+            item.classList.remove("active");
+
+        });
+
+
+        tab.classList.add("active");
+
+
+        renderNews(
+            tab.dataset.type
+        );
+
+    });
+
+});
+
+
+/* INITIAL */
+
+renderNews("news");
+
+
 
   /* ------------------------------------------------------------------------
      4. GSAP ENTRANCE & SCROLL-TRIGGERED ANIMATIONS

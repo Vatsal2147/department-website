@@ -1,0 +1,135 @@
+/* ============================
+   ESED NAVBAR
+============================ */
+
+.site-navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 76px;
+
+    padding: 0 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(7, 13, 11, 0.82);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(132, 166, 150, 0.12);
+
+    z-index: 9999;
+}
+
+
+/* LOGO */
+
+.nav-logo a {
+    display: flex;
+    flex-direction: column;
+
+    text-decoration: none;
+}
+
+.logo-main {
+    font-size: 28px;
+    line-height: 1;
+
+    font-weight: 700;
+    letter-spacing: -0.03em;
+
+    color: #f1f5f2;
+}
+
+.logo-sub {
+    margin-top: 4px;
+
+    font-size: 9px;
+    letter-spacing: 0.25em;
+
+    color: #00ff3c;
+}
+
+
+/* LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 46px;
+}
+
+.nav-links a {
+    position: relative;
+
+    color: #91a39a;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    padding: 28px 0;
+
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f1f5f2;
+}
+
+
+/* ACTIVE PAGE */
+
+.nav-links a.active {
+    color: #f1f5f2;
+}
+
+.nav-links a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 17px;
+
+    height: 2px;
+
+    background: #00ff3c;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .site-navbar {
+        padding: 0 24px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .nav-links {
+        display: none;
+    }
+
+}

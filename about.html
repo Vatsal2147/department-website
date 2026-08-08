@@ -15,6 +15,7 @@
   
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="./css/about.css" />
+  <link rel="stylesheet" href="./css/navbar.css">
 </head>
 <body>
 
@@ -31,13 +32,15 @@
       <a href="#" class="brand-logo">
         <span class="logo-accent">ESED</span>
         <span class="logo-sub">IIT BOMBAY</span>
+        
       </a>
+       <img src="./photos/iitb.png" class="w-14 h-14 object-cover">
       <nav class="nav-links">
         <a href="#about" class="nav-link active">About</a>
-        <a href="#academics" class="nav-link">Academics</a>
+        <a href="./history.html" class="nav-link">Our History</a>
         <a href="#research" class="nav-link">Research</a>
-        <a href="#" class="nav-link">Faculty</a>
-        <a href="#" class="nav-link">Staff</a>
+        <a href="./faculty.html" class="nav-link">Faculty</a>
+        <a href="./staff.html" class="nav-link">Staff</a>
         <a href="#" class="nav-link">Contact</a>
       </nav>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
@@ -68,7 +71,7 @@
           <span>EST. 1985 • IIT BOMBAY</span>
         </div>
         <h1 class="hero-title reveal-text">
-          <span>About</span>
+          <span>Welcome to</span>
           <span class="hero-title-accent">ESED</span>
         </h1>
         <p class="hero-subtitle reveal-text">
@@ -105,22 +108,65 @@
             </p>
           </div>
 
-          <div class="editorial-stats">
-            <div class="stat-card reveal-up">
-              <span class="stat-number" data-target="18">0</span>
-              <span class="stat-label">Core Faculty Members with Diverse Specializations</span>
-            </div>
-            <div class="stat-card reveal-up" style="animation-delay: 0.1s;">
-              <span class="stat-number-text">Multi</span>
-              <span class="stat-label">Disciplinary Backgrounds & Research Interests</span>
-            </div>
-            <div class="stat-card reveal-up" style="animation-delay: 0.2s;">
-              <span class="stat-badge">INNOVATION</span>
-              <span class="stat-label">Periodic guest lectures by leading industry & government experts</span>
-            </div>
-          </div>
+         <div class="news-events-card">
+
+    <!-- HEADER -->
+    <div class="news-events-header">
+
+        <div>
+            <span class="news-events-label">LATEST</span>
+
+            <h3>News & Events</h3>
         </div>
-      </div>
+
+        <a
+            href="https://www.esed.iitb.ac.in/news-all"
+            target="_blank"
+            class="news-view-all"
+        >
+            View all ↗
+        </a>
+
+    </div>
+
+
+    <!-- TABS -->
+    <div class="news-tabs">
+
+        <button
+            class="news-tab active"
+            data-type="news"
+        >
+            News
+        </button>
+
+        <button
+            class="news-tab"
+            data-type="events"
+        >
+            Events
+        </button>
+
+    </div>
+
+
+    <!-- ITEMS -->
+    <div
+        class="news-items"
+        id="newsItems"
+    ></div>
+
+
+    <!-- BOTTOM -->
+    <div class="news-footer">
+
+        <span>Environmental Science & Engineering</span>
+
+        <span class="news-status-dot"></span>
+
+    </div>
+
+</div>
     </section>
 
     <!-- 3. TIMELINE SECTION -->
@@ -259,6 +305,9 @@
           </div>
         </div>
       </div>
+
+      
+
     </section>
 
     <!-- 6. RESEARCH AREAS GRID -->
@@ -458,5 +507,6 @@
 
   <!-- JavaScript Script -->
   <script src="./js/about.js"></script>
+ 
 </body>
 </html>
