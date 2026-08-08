@@ -7,11 +7,11 @@
   --bg-card-hover: rgba(8, 77, 25, 0.8);
   
   --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-active: rgb(30, 113, 52);
+  --border-active: #07da2e;
   
   --accent-emerald: #07da2e;
   --accent-cyan: #09ef10;
-  --accent-amber: #ffb703;
+  --accent-amber: #eaff03;
   
   --text-main: #f3f5f9;
   --text-muted: #8e99ac;
@@ -643,6 +643,21 @@ body {
   padding-top: 2rem;
   color: var(--text-dim);
   font-size: 0.85rem;
+}
+
+/* Quick Hero Centering Override */
+#hero .hero-container {
+  align-items: center !important;
+  text-align: center !important;
+}
+
+#hero .hero-tagline {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+#hero .scroll-indicator {
+  margin: 0 auto !important;
 }
 
 /* ==========================================================================

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Environmental Science & Engineering Department - IIT Bombay</title>
+  
+  <!-- Fonts: Syne for futuristic/editorial headings & Plus Jakarta Sans for clean body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alien+Block&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="./css/about.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="custom-cursor-follower" id="cursor-follower"></div>
+
+  <!-- Background WebGL Canvas -->
+  <canvas id="hero-canvas"></canvas>
+
+  <!-- Sticky Glass Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <span class="logo-accent">ESED</span>
+        <span class="logo-sub">IIT BOMBAY</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#about" class="nav-link active">About</a>
+        <a href="#academics" class="nav-link">Academics</a>
+        <a href="#research" class="nav-link">Research</a>
+        <a href="#" class="nav-link">Faculty</a>
+        <a href="#" class="nav-link">Staff</a>
+        <a href="#" class="nav-link">Contact</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-links">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#academics" class="mobile-link">Academics</a>
+      <a href="#research" class="mobile-link">Research</a>
+      <a href="#" class="mobile-link">Faculty</a>
+      <a href="#" class="mobile-link">Staff</a>
+      <a href="#" class="mobile-link">Contact</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- 1. HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-badge reveal-text">
+          <span class="pulse-dot"></span>
+          <span>EST. 1985 • IIT BOMBAY</span>
+        </div>
+        <h1 class="hero-title reveal-text">
+          <span>About</span>
+          <span class="hero-title-accent">ESED</span>
+        </h1>
+        <p class="hero-subtitle reveal-text">
+          Environmental Science & Engineering Department
+        </p>
+        <p class="hero-tagline reveal-text">
+          Understanding the environment. Engineering a sustainable future.
+        </p>
+        
+        <div class="scroll-indicator reveal-text">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+          <span>SCROLL TO EXPLORE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. WHO WE ARE -->
+    <section class="section who-we-are" id="about">
+      <div class="container">
+        <div class="section-label">OUR IDENTITY</div>
+        <h2 class="editorial-heading reveal-heading">
+          From a <span class="text">centre</span> to a <span class="text">department </span>shaping environmental research.
+        </h2>
+
+        <div class="editorial-grid">
+          <div class="editorial-main reveal-up">
+            <p class="lead-text">
+              The Department of Environmental Science and Engineering at IIT Bombay stands as a pioneer in interdisciplinary environmental education and cutting-edge solutions.
+            </p>
+            <p class="body-text">
+              Established as a dedicated Centre in 1985, the entity officially achieved Department status in February 2019. Driven by a core faculty of 18 multidisciplinary experts, ESED bridges science and engineering to solve pressing local and global ecological challenges.
+            </p>
+          </div>
+
+          <div class="editorial-stats">
+            <div class="stat-card reveal-up">
+              <span class="stat-number" data-target="18">0</span>
+              <span class="stat-label">Core Faculty Members with Diverse Specializations</span>
+            </div>
+            <div class="stat-card reveal-up" style="animation-delay: 0.1s;">
+              <span class="stat-number-text">Multi</span>
+              <span class="stat-label">Disciplinary Backgrounds & Research Interests</span>
+            </div>
+            <div class="stat-card reveal-up" style="animation-delay: 0.2s;">
+              <span class="stat-badge">INNOVATION</span>
+              <span class="stat-label">Periodic guest lectures by leading industry & government experts</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. TIMELINE SECTION -->
+    <section class="section timeline-section">
+      <div class="container">
+        <div class="section-label">02 // MILESTONES</div>
+        <h2 class="section-title reveal-heading">Decades of Ecological Innovation</h2>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-line">
+            <div class="timeline-progress"></div>
+          </div>
+
+          <div class="timeline-events">
+            <div class="timeline-card reveal-timeline">
+              <div class="timeline-node"></div>
+              <div class="timeline-year">1977</div>
+              <h3 class="timeline-title">Foundation Group</h3>
+              <p class="timeline-desc">
+                Environmental Science and Engineering Group existed as an active interdisciplinary group on campus.
+              </p>
+            </div>
+
+            <div class="timeline-card reveal-timeline">
+              <div class="timeline-node"></div>
+              <div class="timeline-year">1985</div>
+              <h3 class="timeline-title">Centre Establishment</h3>
+              <p class="timeline-desc">
+                Officially established as a specialized Environmental Science and Engineering Centre at IIT Bombay.
+              </p>
+            </div>
+
+            <div class="timeline-card reveal-timeline">
+              <div class="timeline-node"></div>
+              <div class="timeline-year">2019</div>
+              <h3 class="timeline-title">Department Status</h3>
+              <p class="timeline-desc">
+                Received full Academic Department status in February 2019, expanding degree offerings and research scale.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. ACADEMICS -->
+    <section class="section academics-section" id="academics">
+      <div class="container">
+        <div class="section-label">03 // EDUCATION</div>
+        <h2 class="section-title reveal-heading">Learning across disciplines.</h2>
+
+        <div class="academics-grid">
+          <!-- Card 1 -->
+          <div class="program-card reveal-up">
+            <div class="card-glass-glow"></div>
+            <span class="program-tag">POSTGRADUATE</span>
+            <h3 class="program-title">M.Tech</h3>
+            <p class="program-desc">Advanced specialization in environmental engineering principles and technological applications.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="program-card reveal-up">
+            <div class="card-glass-glow"></div>
+            <span class="program-tag">DOCTORAL</span>
+            <h3 class="program-title">PhD</h3>
+            <p class="program-desc">Rigorous doctoral research solving fundamental and applied environmental questions.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="program-card reveal-up">
+            <div class="card-glass-glow"></div>
+            <span class="program-badge">SINCE JULY 2010</span>
+            <span class="program-tag">DUAL DEGREE</span>
+            <h3 class="program-title">M.Sc. – PhD</h3>
+            <p class="program-desc">Seamlessly integrated dual degree program bridging pure scientific research and doctoral studies.</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="program-card reveal-up">
+            <div class="card-glass-glow"></div>
+            <span class="program-badge">AUTUMN 2018</span>
+            <span class="program-tag">INTEGRATED</span>
+            <h3 class="program-title">B.Tech. – M.Tech.</h3>
+            <p class="program-desc">Five-year dual degree combining fundamental engineering with advanced environmental technology.</p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="program-card reveal-up">
+            <div class="card-glass-glow"></div>
+            <span class="program-badge">AUTUMN 2023</span>
+            <span class="program-tag">UNDERGRADUATE</span>
+            <h3 class="program-title">B.Tech</h3>
+            <p class="program-desc">Flagship 4-year undergraduate degree preparing future leaders in environmental engineering.</p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="program-card reveal-up">
+            <div class="card-glass-glow"></div>
+            <span class="program-tag">INTERDISCIPLINARY</span>
+            <h3 class="program-title">Minor Degree</h3>
+            <p class="program-desc">Offered to undergraduate students from other engineering & science disciplines at IIT Bombay.</p>
+          </div>
+        </div>
+
+        <!-- Institute Core & Electives banner -->
+        
+    </section>
+
+    <!-- 5. RESEARCH & ECOSYSTEM -->
+    <section class="section research-section" id="research">
+      <div class="container">
+        <div class="section-label">04 // COLLABORATION & IMPACT</div>
+        <h2 class="editorial-heading reveal-heading">
+          Research that tackles real environmental challenges.
+        </h2>
+        <p class="lead-text reveal-up" style="max-width: 800px; margin-bottom: 3rem;">
+          Our ongoing activities address priority local and global environmental mandates. Research at ESED is backed by strategic national collaborations and funding bodies.
+        </p>
+
+        <!-- Interactive Animated Agency Ecosystem -->
+        <div class="agency-ecosystem reveal-up">
+          <div class="ecosystem-center">
+            <span>ESED</span>
+            <small>RESEARCH</small>
+          </div>
+
+          <div class="agency-nodes">
+            <div class="node" data-full="Ministry of Human Resource Development">MHRD</div>
+            <div class="node" data-full="Central Pollution Control Board">CPCB</div>
+            <div class="node" data-full="State Pollution Control Board">SPCB</div>
+            <div class="node" data-full="Ministry of New & Renewable Energy">MNRE</div>
+            <div class="node" data-full="Department of Biotechnology">DBT</div>
+            <div class="node" data-full="Ministry of Environment, Forest & Climate Change">MoEF</div>
+            <div class="node" data-full="Council of Scientific & Industrial Research">CSIR</div>
+            <div class="node" data-full="Department of Science & Technology">DST</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. RESEARCH AREAS GRID -->
+    <section class="section research-areas-section">
+      <div class="container">
+        <div class="section-label">05 // SPECIALIZATIONS</div>
+        <h2 class="section-title reveal-heading">Core Research Domains</h2>
+
+        <div class="areas-grid">
+          <div class="area-card reveal-up">
+            <div class="area-num">01</div>
+            <h3 class="area-title">Clean Technologies & Industrial Pollution Prevention</h3>
+            <p class="area-sub">Sustainable industrial processes reducing emissions at the source.</p>
+          </div>
+          <div class="area-card reveal-up">
+            <div class="area-num">02</div>
+            <h3 class="area-title">Hazardous Waste Treatment & Disposal</h3>
+            <p class="area-sub">Safe confinement, transformation, and neutralization of toxic solids.</p>
+          </div>
+          <div class="area-card reveal-up">
+            <div class="area-num">03</div>
+            <h3 class="area-title">Biomedical Waste Management</h3>
+            <p class="area-sub">Sterilization, handling protocols, and non-polluting waste destruction.</p>
+          </div>
+          <div class="area-card reveal-up">
+            <div class="area-num">04</div>
+            <h3 class="area-title">Industrial Wastewater Biodegradation</h3>
+            <p class="area-sub">Biological treatment for complex organic industrial effluents.</p>
+          </div>
+          <div class="area-card reveal-up">
+            <div class="area-num">05</div>
+            <h3 class="area-title">Non-Aqueous Liquid Pollutants</h3>
+            <p class="area-sub">Mitigating hydrophobic solvents, oils, and persistent organic liquids.</p>
+          </div>
+          <div class="area-card reveal-up">
+            <div class="area-num">06</div>
+            <h3 class="area-title">Desalination & Membrane Technology</h3>
+            <p class="area-sub">Advanced membrane filtration for clean water recovery and brackish treatment.</p>
+          </div>
+          <div class="area-card reveal-up">
+            <div class="area-num">07</div>
+            <h3 class="area-title">Toxicity & Mutagenicity Testing</h3>
+            <p class="area-sub">Bio-assay evaluation of industrial chemicals and environmental samples.</p>
+          </div>
+          <div class="area-card reveal-up">
+            <div class="area-num">08</div>
+            <h3 class="area-title">Novel Bioreactors</h3>
+            <p class="area-sub">High-efficiency biological reactor design for bioprocess engineering.</p>
+          </div>
+          <div class="area-card reveal-up">
+            <div class="area-num">09</div>
+            <h3 class="area-title">Air Pollution & Health Risk</h3>
+            <p class="area-sub">Quantifying atmospheric particulates and human exposure risk assessment.</p>
+          </div>
+          <div class="area-card reveal-up">
+            <div class="area-num">10</div>
+            <h3 class="area-title">Aerosols, PAHs & Source Apportionment</h3>
+            <p class="area-sub">Tracing air contaminants to chemical origins using isotopic and molecular signatures.</p>
+          </div>
+          <div class="area-card reveal-up">
+            <div class="area-num">11</div>
+            <h3 class="area-title">Environmental Impact Assessment</h3>
+            <p class="area-sub">Comprehensive ecological risk analysis for infrastructure and industry.</p>
+          </div>
+          <div class="area-card reveal-up">
+            <div class="area-num">12</div>
+            <h3 class="area-title">Environmental Remediation</h3>
+            <p class="area-sub">Restoration techniques for contaminated soils, groundwater, and natural ecosystems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. RESEARCH ECOSYSTEM SUPPORT -->
+    <section class="section ecosystem-support-section">
+      <div class="container">
+        <div class="section-label">06 // INFRASTRUCTURE</div>
+        <h2 class="editorial-heading reveal-heading">Driven by state-of-the-art facilities & human talent.</h2>
+        
+        <div class="support-grid">
+          <div class="support-item reveal-up">
+            <div class="support-icon">🔬</div>
+            <h3>Experimental Facilities</h3>
+            <p>Advanced Analytical Instruments, Chromatography, and Environmental Testing Labs.</p>
+          </div>
+          <div class="support-item reveal-up">
+            <div class="support-icon">💻</div>
+            <h3>Computational Facilities</h3>
+            <p>High-performance modeling suites for air, water, and climate simulations.</p>
+          </div>
+          <div class="support-item reveal-up">
+            <div class="support-icon">⚙️</div>
+            <h3>Dedicated Technical Staff</h3>
+            <p>Competent professionals ensuring precision measurement and lab safety.</p>
+          </div>
+          <div class="support-item reveal-up">
+            <div class="support-icon">🎓</div>
+            <h3>High-Quality Students</h3>
+            <p>Top national talent advancing research rigor and novel discoveries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. BEYOND RESEARCH (Editorial Layout) -->
+    <section class="section beyond-section">
+      <div class="container">
+        <div class="section-label">07 // OUTREACH</div>
+        <h2 class="section-title reveal-heading">Professional Engagement</h2>
+
+        <div class="editorial-outreach">
+          <div class="outreach-col reveal-up">
+            <h3>Industry & Consultancy</h3>
+            <p>
+              We bridge academic expertise with real-world applications through sponsored research, specialized technical services, and technical consultancy for government and private entities.
+            </p>
+          </div>
+          <div class="outreach-col reveal-up">
+            <h3>Knowledge Transfer</h3>
+            <p>
+              ESED actively hosts technical workshops, Continuing Education Programmes (CEP), and tailored training courses designed to upskill professionals from industry, government, and academia.
+            </p>
+          </div>
+          <div class="outreach-col reveal-up">
+            <h3>Manpower Development</h3>
+            <p>
+              Fostering technical capacity across the nation by educating the next generation of environmental leaders, policy drivers, and scientific researchers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. CLOSING STATEMENT -->
+    <section class="section closing-section">
+      <div class="container text-center">
+        <div class="closing-quote reveal-up">
+          <span class="quote-line">Environmental challenges are complex.</span>
+          <span class="quote-line highlight">Our approach is interdisciplinary.</span>
+        </div>
+        <p class="closing-sub reveal-up">
+          ESED brings together education, research and collaboration to understand environmental challenges and develop solutions for a more sustainable future.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <span class="logo-accent">ESED</span>
+            <span class="logo-sub">IIT BOMBAY</span>
+          </div>
+          <p class="footer-desc">
+            The Department of Environmental Science and Engineering advances education, research and innovation towards a more sustainable future.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#research">Research Areas</a></li>
+            <li><a href="#">Faculty & Staff</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-address">
+          <h4>Location</h4>
+          <p>
+            Environmental Science & Engineering Department<br />
+            Indian Institute of Technology Bombay<br />
+            Powai, Mumbai - 400 076, India
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ESED, IIT Bombay. All Rights Reserved.</p>
+        <p>Designed with ecological precision.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CDN IMPORTS -->
+  <!-- Three.js for 3D Background Canvas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Lenis for smooth scroll inertia -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+  <!-- JavaScript Script -->
+  <script src="./js/about.js"></script>
+</body>
+</html>
