@@ -83,15 +83,82 @@
         </div>
 
         <div class="quick-grid">
-          <a class="quick-card large reveal-up" href="https://www.esed.iitb.ac.in/sites/default/files/2025-07/Course%20Curriculum%20UG-B.Tech%202024-25.pdf">
-            <div class="card-number">01</div>
-            <div class="card-icon">↗</div>
-            <div class="card-bottom">
-              <span class="eyebrow">ACADEMICS</span>
-              <h3>Courses &<br>syllabus</h3>
-              <p>Course information, academic resources and semester essentials.</p>
-            </div>
-          </a>
+          
+<!-- COURSES & SYLLABUS FLIP CARD -->
+<div class="quick-card quick-card-flip large reveal-up" id="coursesFlipCard">
+
+  <div class="quick-card-flip-inner">
+
+    <!-- FRONT OF CARD -->
+    <button
+      type="button"
+      class="quick-card-face quick-card-front"
+      id="coursesFlipButton"
+      aria-expanded="false"
+      aria-label="Reveal courses and syllabus options"
+    >
+      <span class="card-number">01</span>
+      <span class="card-icon">↻</span>
+
+      <span class="card-bottom">
+        <span class="eyebrow">ACADEMICS</span>
+        <span class="quick-card-title">
+          Courses &amp;<br>syllabus
+        </span>
+        <span class="quick-card-description">
+          Course information, academic resources and semester essentials.
+        </span>
+        <span class="flip-hint">CLICK TO EXPLORE ↗</span>
+      </span>
+    </button>
+
+    <!-- BACK OF CARD -->
+    <div class="quick-card-face quick-card-back" aria-hidden="true">
+
+      <div class="flip-back-header">
+        <span class="eyebrow">ACADEMICS / CURRICULUM</span>
+        <h3>Choose your<br><em>curriculum.</em></h3>
+      </div>
+
+      <div class="flip-curriculum-options">
+
+        <a href="pdfs/btech-1st-year.pdf" target="_blank" rel="noopener noreferrer">
+          <span>01</span> B.Tech — 1st Year <span>↗</span>
+        </a>
+
+        <a href="pdfs/btech-2nd-year.pdf" target="_blank" rel="noopener noreferrer">
+          <span>02</span> B.Tech — 2nd Year <span>↗</span>
+        </a>
+
+        <a href="pdfs/btech-3rd-year.pdf" target="_blank" rel="noopener noreferrer">
+          <span>03</span> B.Tech — 3rd Year <span>↗</span>
+        </a>
+
+        <a href="pdfs/btech-4th-year.pdf" target="_blank" rel="noopener noreferrer">
+          <span>04</span> B.Tech — 4th Year <span>↗</span>
+        </a>
+
+        <a href="pdfs/mtech-ta-1st-year.pdf" target="_blank" rel="noopener noreferrer">
+          <span>05</span> M.Tech TA — 1st Year <span>↗</span>
+        </a>
+
+        <a href="pdfs/mtech-ta-2nd-year.pdf" target="_blank" rel="noopener noreferrer">
+          <span>06</span> M.Tech TA — 2nd Year <span>↗</span>
+        </a>
+
+        <a href="pdfs/mtech-ra.pdf" target="_blank" rel="noopener noreferrer">
+          <span>07</span> M.Tech RA <span>↗</span>
+        </a>
+
+      </div>
+
+      <button type="button" class="flip-back-button" id="coursesFlipBack">
+        ← BACK
+      </button>
+
+    </div>
+  </div>
+</div>
 
           <a class="quick-card reveal-up" href="#opportunities">
             <div class="card-number">02</div>
@@ -112,6 +179,18 @@
               <p>Lectures, seminars, deadlines and department activities.</p>
             </div>
           </a>
+
+          <a class="quick-card reveal-up goal-planner-quick-card"
+   href="#goal-planner">
+  <div class="card-number">04</div>
+  <div class="card-icon">↗</div>
+
+  <div class="card-bottom">
+    <span class="eyebrow">ACADEMIC TOOLS</span>
+    <h3>Goal<br>Planner</h3>
+    <p>Set a target CGPA and track your progress towards it.</p>
+  </div>
+</a>
 
           <a class="quick-card reveal-up" href="#toolkit">
             <div class="card-number">04</div>
@@ -189,9 +268,226 @@
           </article>
         </div>
 
-        <p class="demo-note reveal-up">Demo content — replace these entries with your department's actual events and deadlines.</p>
+       
       </div>
     </section>
+
+    
+<!-- GOAL PLANNER -->
+<section class="section goal-planner-section" id="goal-planner">
+  <div class="container">
+
+    <div class="section-heading reveal-up">
+      <div>
+        <span class="section-label">03 // ACADEMIC GOALS</span>
+        <h2>Plan your next<br><em>milestone.</em></h2>
+      </div>
+      <p>
+        Set meaningful targets, track your progress, and understand
+        what it will take to reach your desired CGPA.
+      </p>
+    </div>
+
+    <div class="goal-planner-layout">
+
+      <!-- LEFT: GOAL TRACKERS -->
+      <div class="goal-tracker-panel reveal-up">
+        
+        
+
+        <div class="goal-progress-card">
+          <div class="goal-card-top">
+            <div>
+              <span class="goal-card-label">ACADEMIC PERFORMANCE</span>
+              <h4>CGPA target</h4>
+            </div>
+            <span class="goal-status">IN PROGRESS</span>
+          </div>
+
+          <div class="goal-card-values">
+            <span>Current CGPA</span>
+            <strong id="trackerCurrentCgpa">9.71</strong>
+          </div>
+
+          <div class="goal-progress-track">
+            <span id="trackerCgpaBar"></span>
+          </div>
+
+          <div class="goal-card-bottom">
+            <span>Target: <strong id="trackerTargetCgpa">10.00</strong></span>
+            <span id="trackerCgpaPercent">97.1%</span>
+          </div>
+        </div>
+
+        <div class="goal-progress-card">
+          <div class="goal-card-top">
+            <div>
+              <span class="goal-card-label">SEMESTER PLANNING</span>
+              <h4>Semester target</h4>
+            </div>
+            <span class="goal-status">PLANNING</span>
+          </div>
+
+          <div class="goal-card-values">
+            <span>Target semester</span>
+            <strong id="trackerSemester">6</strong>
+          </div>
+
+          <div class="goal-progress-track">
+            <span id="trackerSemesterBar"></span>
+          </div>
+
+          <div class="goal-card-bottom">
+            <span>Current semester: 4</span>
+            <span id="trackerSemestersLeft">2 remaining</span>
+          </div>
+        </div>
+
+        <div class="goal-note">
+                    
+        </div>
+      </div>
+
+      <!-- RIGHT: CGPA CALCULATOR -->
+      <div class="cgpa-calculator reveal-up">
+        <div class="calculator-header">
+          <div>
+            <span class="eyebrow">ACADEMIC CALCULATOR</span>
+            <h3>Goal Planner</h3>
+          </div>
+          <span class="calculator-icon">◎</span>
+        </div>
+
+        <div class="calculator-field">
+          <label for="currentCgpa">CURRENT CGPA</label>
+          <input
+            id="currentCgpa"
+            type="number"
+            min="0"
+            max="10"
+            step="0.01"
+            value="9.71"
+          />
+          <small>Your CGPA after completed semesters.</small>
+        </div>
+
+        <div class="calculator-field">
+          <label for="targetCgpa">TARGET CGPA</label>
+          <input
+            id="targetCgpa"
+            type="number"
+            min="0"
+            max="10"
+            step="0.01"
+            value="10.00"
+          />
+
+          <div class="cgpa-presets">
+            <button type="button" data-target="8.00">8.00</button>
+            <button type="button" data-target="9.00">9.00</button>
+            <button type="button" data-target="9.50">9.50</button>
+            <button type="button" data-target="10.00">10.00</button>
+          </div>
+        </div>
+
+       
+<div class="calculator-input-grid">
+
+  <div class="calculator-field">
+    <label for="currentSemester">CURRENT SEMESTER</label>
+    <input
+      id="currentSemester"
+      type="number"
+      min="1"
+      max="11"
+      step="1"
+      placeholder="e.g. 4"
+      required
+    />
+  </div>
+
+  <div class="calculator-field">
+    <label for="completedCredits">COMPLETED CREDITS</label>
+    <input
+      id="completedCredits"
+      type="number"
+      min="0"
+      max="1000"
+      step="1"
+      placeholder="e.g. 80"
+      required
+    />
+  </div>
+
+  <div class="calculator-field">
+    <label for="targetSemester">TARGET SEMESTER</label>
+    <input
+      id="targetSemester"
+      type="number"
+      min="2"
+      max="12"
+      step="1"
+      placeholder="e.g. 6"
+      required
+    />
+  </div>
+
+  <div class="calculator-field">
+    <label for="creditsPerSemester">CREDITS / SEM</label>
+    <input
+      id="creditsPerSemester"
+      type="number"
+      min="1"
+      max="100"
+      step="1"
+      value="22"
+      required
+    />
+  </div>
+
+</div>
+
+
+        <p class="calculator-context" id="calculatorContext">
+          You are currently past semester 4.
+        </p>
+
+        <div class="calculator-result" id="calculatorResult"
+             aria-live="polite">
+          <span class="result-label">REQUIRED AVG SGPA / SEM</span>
+          <strong id="requiredSgpa">—</strong>
+          <p id="resultExplanation">Enter your details to calculate your goal.</p>
+
+          <div class="result-meter">
+            <div class="result-meter-track">
+              <span id="resultMeterFill"></span>
+              <i id="resultAverageMarker"></i>
+              <i id="resultBestMarker"></i>
+            </div>
+            <div class="result-meter-labels">
+              <span>● Average</span>
+              <span>● Best: 10.00</span>
+            </div>
+          </div>
+
+          <p class="result-message" id="resultMessage"></p>
+        </div>  
+
+        <div class="calculator-disclaimer">
+          <span>ⓘ</span>
+          <p>
+            This is an estimate based on your current CGPA and the
+            credits you enter. It assumes the same number of credits
+            per remaining semester. Use your actual completed credits
+            for the most accurate result.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <!-- ACADEMICS -->
     <!-- YOUR SEMESTER, SORTED -->

@@ -702,3 +702,297 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ==========================================
+   FACULTY CARDS — COMPACT + PREMIUM HOVER
+   Paste at the VERY BOTTOM of faculty.css
+   ========================================== */
+
+/* Four cards per row */
+.faculty-list {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+/* All cards use the same compact layout */
+.faculty-card,
+.faculty-card.featured {
+  grid-column: span 3;
+  position: relative;
+  isolation: isolate;
+  min-width: 0;
+  border: 1px solid rgba(145, 169, 149, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--bg-card);
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+/* Remove the oversized featured-card split layout */
+.faculty-card.featured .card-inner {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 1fr;
+}
+
+/* Reduce portrait height */
+.faculty-card .card-media,
+.faculty-card.featured .card-media {
+  width: 100%;
+  height: 220px;
+  min-height: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Portrait styling */
+.faculty-card .faculty-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(15%);
+  transition:
+    transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1),
+    filter 0.4s ease;
+}
+
+/* Tighter text spacing */
+.faculty-card .card-content {
+  padding: 1.15rem;
+  gap: 0.8rem;
+  justify-content: flex-start;
+}
+
+.faculty-card .card-header {
+  gap: 0.5rem;
+}
+
+.faculty-card h2,
+.faculty-card h3,
+.faculty-card .card-content h2,
+.faculty-card .card-content h3 {
+  font-size: 1.08rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.faculty-card .card-content p {
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+/* Moving shine layer */
+.faculty-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    transparent 25%,
+    rgba(7, 218, 46, 0.04) 38%,
+    rgba(234, 255, 3, 0.17) 49%,
+    rgba(255, 255, 255, 0.1) 51%,
+    transparent 64%
+  );
+  transform: translateX(-110%);
+  transition: transform 0.75s ease;
+}
+
+/* Stylish hover state */
+.faculty-card:hover {
+  transform: translateY(-6px);
+  border-color: #07da2e;
+  background: var(--bg-card-hover);
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.22),
+    0 0 18px rgba(7, 218, 46, 0.12);
+}
+
+.faculty-card:hover::after {
+  transform: translateX(110%);
+}
+
+.faculty-card:hover .faculty-img {
+  transform: scale(1.055);
+  filter: grayscale(0%);
+}
+
+/* Keyboard accessibility */
+.faculty-card:focus-within {
+  outline: 2px solid #eaff03;
+  outline-offset: 3px;
+}
+
+/* Three cards per row on medium screens */
+@media (max-width: 1200px) {
+  .faculty-card,
+  .faculty-card.featured {
+    grid-column: span 4;
+  }
+}
+
+/* Two cards per row on tablets */
+@media (max-width: 900px) {
+  .faculty-card,
+  .faculty-card.featured {
+    grid-column: span 6;
+  }
+
+  .faculty-card .card-media,
+  .faculty-card.featured .card-media {
+    height: 210px;
+  }
+}
+
+/* One card per row on phones */
+@media (max-width: 560px) {
+  .faculty-list {
+    gap: 1rem;
+  }
+
+  .faculty-card,
+  .faculty-card.featured {
+    grid-column: span 12;
+  }
+
+  .faculty-card .card-media,
+  .faculty-card.featured .card-media {
+    height: 260 px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .faculty-card,
+  .faculty-card::after,
+  .faculty-card .faculty-img {
+    transition: none !important;
+  }
+
+  .faculty-card:hover {
+    transform: none;
+  }
+}
+
+
+/* Cleaner faculty cards */
+.faculty-card .info-grid {
+  display: none;
+}
+
+.faculty-card .card-content {
+  justify-content: flex-start;
+  gap: 0.75rem;
+  padding: 1.15rem;
+}
+
+.faculty-card .card-header {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.faculty-card .faculty-name {
+  font-size: 1.2rem;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.faculty-card .faculty-designation {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.faculty-card .card-action {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* Two compact action buttons */
+.faculty-card .btn-profile,
+.faculty-card .btn-homepage {
+  display: inline-flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid rgba(7, 218, 46, 0.35);
+  border-radius: 8px;
+  color: var(--accent-emerald);
+  background: rgba(7, 218, 46, 0.04);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.faculty-card .btn-profile:hover,
+.faculty-card .btn-homepage:hover {
+  background: rgba(7, 218, 46, 0.12);
+  border-color: #07da2e;
+  color: #eaff03;
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(7, 218, 46, 0.1);
+}
+
+/* Keep cards compact, including the formerly featured card */
+.faculty-card.featured {
+  grid-column: span 3;
+}
+
+.faculty-card.featured .card-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.faculty-card.featured .card-media {
+  height: 220px;
+  min-height: 0;
+}
+
+.faculty-card .card-media {
+  height: 220px;
+}
+
+@media (max-width: 1200px) {
+  .faculty-card,
+  .faculty-card.featured {
+    grid-column: span 4;
+  }
+}
+
+@media (max-width: 900px) {
+  .faculty-card,
+  .faculty-card.featured {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 560px) {
+  .faculty-card,
+  .faculty-card.featured {
+    grid-column: span 12;
+  }
+}
+

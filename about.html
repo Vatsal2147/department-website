@@ -81,13 +81,7 @@
           Understanding the environment. Engineering a sustainable future.
         </p>
         
-        <div class="scroll-indicator reveal-text">
-          <div class="mouse">
-            <div class="wheel"></div>
-          </div>
-          <span>SCROLL TO EXPLORE</span>
-        </div>
-      </div>
+        
     </section>
 
     <!-- 2. WHO WE ARE -->
@@ -107,50 +101,7 @@
               Established as a dedicated Centre in 1985, the entity officially achieved Department status in February 2019. Driven by a core faculty of 18 multidisciplinary experts, ESED bridges science and engineering to solve pressing local and global ecological challenges.
             </p>
           </div>
-
-         <div class="news-events-card">
-
-    <!-- HEADER -->
-    <div class="news-events-header">
-
-        <div>
-            <span class="news-events-label">LATEST</span>
-
-            <h3>News & Events</h3>
-        </div>
-
-        <a
-            href="https://www.esed.iitb.ac.in/news-all"
-            target="_blank"
-            class="news-view-all"
-        >
-            View all ↗
-        </a>
-
     </div>
-
-
-    <!-- TABS -->
-    <div class="news-tabs">
-
-        <button
-            class="news-tab active"
-            data-type="news"
-        >
-            News
-        </button>
-
-        <button
-            class="news-tab"
-            data-type="events"
-        >
-            Events
-        </button>
-
-    </div>
-
-
-    <!-- ITEMS -->
     <div
         class="news-items"
         id="newsItems"
@@ -158,16 +109,116 @@
 
 
     <!-- BOTTOM -->
-    <div class="news-footer">
-
-        <span>Environmental Science & Engineering</span>
-
-        <span class="news-status-dot"></span>
-
-    </div>
+    
 
 </div>
     </section>
+
+    
+<!-- DEPARTMENT NEWS & EVENTS -->
+<section class="dept-updates" id="news-events">
+  <div class="dept-updates__inner">
+
+    <div class="dept-updates__heading">
+      <div>
+        <span class="dept-updates__eyebrow">
+          <span aria-hidden="true">●</span> &nbsp; ANNOUNCEMENTS
+        </span>
+
+        <h2 class="dept-updates__title">
+          Latest from the Department
+        </h2>
+      </div>
+
+      <a
+        class="dept-updates__view-all"
+        href="https://www.esed.iitb.ac.in/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        VIEW ALL &nbsp; →
+      </a>
+    </div>
+
+    <div class="dept-updates__tabs" role="group" aria-label="Choose department updates">
+  <button
+    class="dept-updates__tab active"
+    type="button"
+    data-type="news"
+    aria-pressed="true"
+  >
+    News
+  </button>
+
+  <button
+    class="dept-updates__tab"
+    type="button"
+    data-type="events"
+    aria-pressed="false"
+  >
+    Events
+  </button>
+</div>
+
+    <div class="dept-updates__grid">
+
+      <!-- FEATURED ANNOUNCEMENT -->
+      <article class="dept-updates__featured">
+        <div class="dept-updates__featured-top">
+          <div class="dept-updates__date">
+            <strong id="dept-featured-day">7</strong>
+            <span id="dept-featured-date">OCT 2026</span>
+          </div>
+
+          <span class="dept-updates__category" id="dept-featured-category">
+            EVENTS
+          </span>
+        </div>
+
+        <h3 id="dept-featured-title">
+          CLIP-Seminar — Parthe Pandit, CMIInDS IITB
+        </h3>
+
+        <p
+          class="dept-updates__description"
+          id="dept-featured-description"
+        >
+          CLIP-Seminar talk by Prof. Parthe Pandit: Wednesday,
+          7th October 2026 — EEG-301, GG Building, 5:00 PM.
+        </p>
+
+        <a
+          class="dept-updates__read"
+          id="dept-featured-read"
+          href="https://www.esed.iitb.ac.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Read announcement &nbsp; →
+        </a>
+
+        <a
+          class="dept-updates__external"
+          id="dept-featured-external"
+          href="https://www.esed.iitb.ac.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ↗ &nbsp; Event website
+        </a>
+
+        <div class="dept-updates__spacer"></div>
+      </article>
+
+      <!-- THREE COMPACT ANNOUNCEMENTS -->
+      <div class="dept-updates__list" id="dept-updates-list">
+        <!-- Populated by the isolated JavaScript below. -->
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <!-- 3. TIMELINE SECTION -->
     <section class="section timeline-section">
@@ -211,6 +262,188 @@
         </div>
       </div>
     </section>
+
+    
+<!-- 03 — Department Gallery -->
+<section class="esed-gallery" id="esed-gallery">
+  <div class="esed-gallery__inner">
+
+    <div class="esed-gallery__eyebrow">
+      <span class="esed-gallery__eyebrow-icon">↗</span>
+      <span>DEPARTMENT GALLERY</span>
+      <span class="esed-gallery__eyebrow-line"></span>
+      
+    </div>
+
+    <div class="esed-gallery__heading">
+      <div>
+        <h2>DDAF <span> 2026</span></h2>
+        <p>
+          The Dual Degree Annual Felicitation | 22 September 2026
+        </p>
+      </div>
+
+      <button
+        class="esed-gallery__all"
+        id="gallery-view-all"
+        type="button"
+      >
+        <span>EXPLORE GALLERY</span>
+        <span class="esed-gallery__all-arrow">↗</span>
+      </button>
+    </div>
+
+    <div class="esed-gallery__grid" id="gallery-grid">
+
+      <!-- Large featured photograph -->
+      <button
+        class="esed-gallery__photo esed-gallery__photo--main"
+        type="button"
+        data-photo="0"
+        aria-label="View featured department event"
+      >
+        <img
+  src="https://placehold.co/1200x900/102719/07da2e?text=ESED+Events"
+  alt="ESED department event placeholder"
+  loading="lazy"
+/>
+        <span class="esed-gallery__image-shade"></span>
+        <span class="esed-gallery__photo-caption">
+          <span class="esed-gallery__photo-category">01 / HIGHLIGHTS</span>
+          <span class="esed-gallery__photo-title">
+            Moments that bring us together
+          </span>
+        </span>
+        <span class="esed-gallery__zoom" aria-hidden="true">↗</span>
+      </button>
+
+      <!-- Smaller photographs -->
+      <button
+        class="esed-gallery__photo"
+        type="button"
+        data-photo="1"
+        aria-label="View seminar photograph"
+      >
+        <img
+  src="https://placehold.co/700x500/163522/eaff03?text=Research"
+  alt="Research event placeholder"
+  loading="lazy"
+/>
+        <span class="esed-gallery__image-shade"></span>
+        <span class="esed-gallery__photo-caption">
+          <span class="esed-gallery__photo-category">02 / COMMUNITY</span>
+          <span class="esed-gallery__photo-title">Our community</span>
+        </span>
+        <span class="esed-gallery__zoom" aria-hidden="true">↗</span>
+      </button>
+
+      <button
+        class="esed-gallery__photo"
+        type="button"
+        data-photo="2"
+        aria-label="View research photograph"
+      >
+        <img
+          src="images/gallery/event-3.jpg"
+          alt="Research and academic activities"
+          loading="lazy"
+        />
+        <span class="esed-gallery__image-shade"></span>
+        <span class="esed-gallery__photo-caption">
+          <span class="esed-gallery__photo-category">03 / RESEARCH</span>
+          <span class="esed-gallery__photo-title">Ideas into impact</span>
+        </span>
+        <span class="esed-gallery__zoom" aria-hidden="true">↗</span>
+      </button>
+
+      <button
+        class="esed-gallery__photo"
+        type="button"
+        data-photo="3"
+        aria-label="View workshop photograph"
+      >
+        <img
+          src="images/gallery/event-4.jpg"
+          alt="Students participating in an academic workshop"
+          loading="lazy"
+        />
+        <span class="esed-gallery__image-shade"></span>
+        <span class="esed-gallery__photo-caption">
+          <span class="esed-gallery__photo-category">04 / LEARNING</span>
+          <span class="esed-gallery__photo-title">Learning together</span>
+        </span>
+        <span class="esed-gallery__zoom" aria-hidden="true">↗</span>
+      </button>
+
+      <!-- Final tile opens the full gallery -->
+      <button
+        class="esed-gallery__photo esed-gallery__photo--more"
+        type="button"
+        id="gallery-more"
+        aria-label="Explore all department photographs"
+      >
+        <img
+          src="images/gallery/event-5.jpg"
+          alt="Highlights from department events"
+          loading="lazy"
+        />
+        <span class="esed-gallery__more-overlay"></span>
+        <span class="esed-gallery__more-content">
+          <strong id="gallery-more-count">+ MORE</strong>
+          <span>VIEW ALL PHOTOS</span>
+          <span class="esed-gallery__more-arrow">↗</span>
+        </span>
+      </button>
+
+    </div>
+
+    <div class="esed-gallery__footer">
+      <span>RESEARCH <i>·</i> PEOPLE <i>·</i> EXPERIENCES</span>
+      <span class="esed-gallery__footer-mark">ESED / IIT BOMBAY</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- Gallery lightbox -->
+<div
+  class="esed-lightbox"
+  id="esed-lightbox"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Department photo viewer"
+  aria-hidden="true"
+>
+  <button
+    class="esed-lightbox__close"
+    id="lightbox-close"
+    type="button"
+    aria-label="Close gallery"
+  >×</button>
+
+  <button
+    class="esed-lightbox__nav esed-lightbox__prev"
+    id="lightbox-prev"
+    type="button"
+    aria-label="Previous photograph"
+  >←</button>
+
+  <figure class="esed-lightbox__figure">
+    <img id="lightbox-image" src="" alt="" />
+    <figcaption>
+      <span id="lightbox-caption"></span>
+      <span id="lightbox-counter"></span>
+    </figcaption>
+  </figure>
+
+  <button
+    class="esed-lightbox__nav esed-lightbox__next"
+    id="lightbox-next"
+    type="button"
+    aria-label="Next photograph"
+  >→</button>
+</div>
+
 
     <!-- 4. ACADEMICS -->
     <section class="section academics-section" id="academics">
@@ -507,6 +740,9 @@
 
   <!-- JavaScript Script -->
   <script src="./js/about.js"></script>
+  <script src="js/department-updates.js"></script>
+  <script src="gallery.js" defer></script>
+
  
 </body>
 </html>

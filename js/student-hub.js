@@ -779,4 +779,259 @@ renderSemester("1");
       lenis.scrollTo(target, { offset: -60, duration: 1.2 });
     });
   });
+  /* ================================================================
+   GOAL PLANNER — CGPA CALCULATOR
+   ================================================================ */
+
+
+/* ================================================================
+   GOAL PLANNER — CGPA CALCULATOR
+   ================================================================ */
+
+const currentCgpaInput = document.getElementById("currentCgpa");
+const targetCgpaInput = document.getElementById("targetCgpa");
+const currentSemesterInput = document.getElementById("currentSemester");
+const completedCreditsInput = document.getElementById("completedCredits");
+const targetSemesterInput = document.getElementById("targetSemester");
+const creditsInput = document.getElementById("creditsPerSemester");
+
+const requiredSgpaOutput = document.getElementById("requiredSgpa");
+const resultExplanation = document.getElementById("resultExplanation");
+const resultMessage = document.getElementById("resultMessage");
+const calculatorResult = document.getElementById("calculatorResult");
+const calculatorContext = document.getElementById("calculatorContext");
+
+const resultMeterFill = document.getElementById("resultMeterFill");
+const resultAverageMarker = document.getElementById("resultAverageMarker");
+const resultBestMarker = document.getElementById("resultBestMarker");
+
+const trackerCurrentCgpa = document.getElementById("trackerCurrentCgpa");
+const trackerTargetCgpa = document.getElementById("trackerTargetCgpa");
+const trackerCgpaBar = document.getElementById("trackerCgpaBar");
+const trackerCgpaPercent = document.getElementById("trackerCgpaPercent");
+const trackerSemester = document.getElementById("trackerSemester");
+const trackerSemesterBar = document.getElementById("trackerSemesterBar");
+const trackerSemestersLeft = document.getElementById("trackerSemestersLeft");
+const trackerCurrentSemesterLabel = document.getElementById("trackerCurrentSemesterLabel");
+
+if (
+  currentCgpaInput &&
+  targetCgpaInput &&
+  currentSemesterInput &&
+  completedCreditsInput &&
+  targetSemesterInput &&
+  creditsInput &&
+  requiredSgpaOutput &&
+  resultExplanation &&
+  resultMessage &&
+  calculatorResult &&
+  calculatorContext &&
+  resultMeterFill &&
+  resultAverageMarker &&
+  resultBestMarker &&
+  trackerCurrentCgpa &&
+  trackerTargetCgpa &&
+  trackerCgpaBar &&
+  trackerCgpaPercent &&
+  trackerSemester &&
+  trackerSemesterBar &&
+  trackerSemestersLeft
+) {
+  const maxCgpa = 10;
+
+  const clamp = (value, min, max) =>
+    Math.min(Math.max(value, min), max);
+
+  function updateGoalPlanner() {
+    const currentCgpa = Number(currentCgpaInput.value);
+    const targetCgpa = Number(targetCgpaInput.value);
+    const currentSemester = Number(currentSemesterInput.value);
+    const completedCredits = Number(completedCreditsInput.value);
+    const targetSemester = Number(targetSemesterInput.value);
+    const creditsPerSemester = Number(creditsInput.value);
+
+    const valid =
+      currentCgpaInput.value.trim() !== "" &&
+      targetCgpaInput.value.trim() !== "" &&
+      currentSemesterInput.value.trim() !== "" &&
+      completedCreditsInput.value.trim() !== "" &&
+      targetSemesterInput.value.trim() !== "" &&
+      creditsInput.value.trim() !== "" &&
+      Number.isFinite(currentCgpa) &&
+      Number.isFinite(targetCgpa) &&
+      Number.isInteger(currentSemester) &&
+      Number.isInteger(completedCredits) &&
+      Number.isInteger(targetSemester) &&
+      Number.isFinite(creditsPerSemester) &&
+      currentCgpa >= 0 &&
+      currentCgpa <= maxCgpa &&
+      targetCgpa >= 0 &&
+      targetCgpa <= maxCgpa &&
+      currentSemester >= 1 &&
+      currentSemester <= 11 &&
+      completedCredits >= 0 &&
+      targetSemester > currentSemester &&
+      targetSemester <= 12 &&
+      creditsPerSemester > 0 &&
+      creditsPerSemester <= 100;
+
+    calculatorResult.classList.remove(
+      "result-impossible",
+      "result-invalid"
+    );
+
+    if (!valid) {
+      requiredSgpaOutput.textContent = "—";
+
+      resultExplanation.textContent =
+        "Enter valid values to calculate your target.";
+
+      resultMessage.textContent =
+        "Enter your current semester, completed credits, and a later target semester. CGPA must be between 0 and 10, and credits must be positive.";
+
+      calculatorContext.textContent =
+        "Check your inputs to continue.";
+
+      calculatorResult.classList.add("result-invalid");
+
+      resultMeterFill.style.width = "0%";
+      resultAverageMarker.style.left = "0%";
+      resultBestMarker.style.left = "100%";
+
+      return;
+    }
+
+    // Calculate future semesters and credits.
+    const semestersLeft = targetSemester - currentSemester;
+    const futureCredits = semestersLeft * creditsPerSemester;
+    const finalCredits = completedCredits + futureCredits;
+
+    // Credit-weighted CGPA calculation.
+    const requiredSgpa =
+      (
+        targetCgpa * finalCredits -
+        currentCgpa * completedCredits
+      ) / futureCredits;
+
+    calculatorContext.textContent =
+      `${semestersLeft} future semester${semestersLeft === 1 ? "" : "s"} remaining (semester ${currentSemester + 1}–${targetSemester}).`;
+
+    // Update the CGPA tracker.
+    trackerCurrentCgpa.textContent = currentCgpa.toFixed(2);
+    trackerTargetCgpa.textContent = targetCgpa.toFixed(2);
+
+    const cgpaProgress =
+      targetCgpa > 0
+        ? (currentCgpa / targetCgpa) * 100
+        : 100;
+
+    trackerCgpaBar.style.width =
+      `${clamp(cgpaProgress, 0, 100)}%`;
+
+    trackerCgpaPercent.textContent =
+      `${cgpaProgress.toFixed(1)}%`;
+
+    // Update the semester tracker.
+    trackerSemester.textContent = targetSemester;
+
+    trackerSemestersLeft.textContent =
+      `${semestersLeft} remaining`;
+
+    trackerSemesterBar.style.width =
+      `${clamp((currentSemester / targetSemester) * 100, 0, 100)}%`;
+
+    if (trackerCurrentSemesterLabel) {
+      trackerCurrentSemesterLabel.textContent =
+        `Currently in semester ${currentSemester}`;
+    }
+
+    // Highlight the selected CGPA preset.
+    document.querySelectorAll(".cgpa-presets button").forEach((button) => {
+      button.classList.toggle(
+        "active",
+        Number(button.dataset.target) === targetCgpa
+      );
+    });
+
+    // If the current CGPA already meets the target, no increase is needed.
+    if (currentCgpa >= targetCgpa) {
+      requiredSgpaOutput.textContent = "On track";
+
+      resultExplanation.textContent =
+        "Your current CGPA already meets or exceeds your target.";
+
+      resultMessage.textContent =
+        "Maintain your performance to preserve your target CGPA.";
+
+      resultMeterFill.style.width = "100%";
+
+      resultAverageMarker.style.left =
+        `${clamp((currentCgpa / maxCgpa) * 100, 0, 100)}%`;
+
+      resultBestMarker.style.left = "100%";
+
+      return;
+    }
+
+    requiredSgpaOutput.textContent = requiredSgpa.toFixed(2);
+
+    resultExplanation.textContent =
+      `Average SGPA needed across ${semestersLeft} semester${semestersLeft === 1 ? "" : "s"} ` +
+      `(${currentSemester + 1}–${targetSemester}), assuming ${creditsPerSemester} credits each.`;
+
+    // Update the result meter.
+    resultMeterFill.style.width =
+      `${clamp((requiredSgpa / maxCgpa) * 100, 0, 100)}%`;
+
+    resultAverageMarker.style.left =
+      `${clamp((currentCgpa / maxCgpa) * 100, 0, 100)}%`;
+
+    resultBestMarker.style.left = "100%";
+
+    // Explain whether the target is achievable.
+    if (requiredSgpa > maxCgpa) {
+      calculatorResult.classList.add("result-impossible");
+
+      resultMessage.textContent =
+        `Not achievable by semester ${targetSemester} — even a 10.00 SGPA every remaining semester won't reach ${targetCgpa.toFixed(2)}.`;
+    } else if (requiredSgpa < 0) {
+      resultMessage.textContent =
+        "Your current CGPA is already sufficient for this target based on the entered credits.";
+    } else if (requiredSgpa >= 9) {
+      resultMessage.textContent =
+        "Achievable, but it requires consistently excellent semester performance.";
+    } else if (requiredSgpa >= 7) {
+      resultMessage.textContent =
+        "This target is within reach with strong, consistent semester performance.";
+    } else {
+      resultMessage.textContent =
+        "This target is comfortably within reach based on your entered values.";
+    }
+  }
+
+  // Recalculate whenever any input changes.
+  [
+    currentCgpaInput,
+    targetCgpaInput,
+    currentSemesterInput,
+    completedCreditsInput,
+    targetSemesterInput,
+    creditsInput
+  ].forEach((input) => {
+    input.addEventListener("input", updateGoalPlanner);
+  });
+
+  // Target CGPA preset buttons.
+  document.querySelectorAll(".cgpa-presets button").forEach((button) => {
+    button.addEventListener("click", () => {
+      targetCgpaInput.value = button.dataset.target;
+      updateGoalPlanner();
+    });
+  });
+
+  // Initial calculation.
+  updateGoalPlanner();
+}
+
 });
+

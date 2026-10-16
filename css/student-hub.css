@@ -616,3 +616,697 @@ body.hovering .cursor-ring { width: 54px; height: 54px; border-color: var(--gree
         font-size: 0.6rem;
     }
 }
+
+
+/* ========================================
+   COURSES & SYLLABUS FLIP CARD
+======================================== */
+
+.quick-card-flip {
+  padding: 0;
+  overflow: visible;
+  perspective: 1400px;
+  background: transparent;
+  border: none;
+  min-height: 572px;
+}
+
+.quick-card-flip:hover {
+  background: transparent;
+  border-color: transparent;
+  transform: none;
+}
+
+.quick-card-flip::before {
+  display: none;
+}
+
+.quick-card-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 572px;
+  transform-style: preserve-3d;
+  transition: transform 0.85s cubic-bezier(.2, .75, .25, 1);
+}
+
+.quick-card-flip.is-flipped .quick-card-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.quick-card-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--text);
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+/* FRONT */
+
+.quick-card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 27px;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  transition: border-color .3s ease, background .3s ease;
+}
+
+.quick-card-front:hover {
+  border-color: var(--line-green);
+  background: var(--card-2);
+}
+
+.quick-card-front .card-number,
+.quick-card-front .card-icon,
+.quick-card-front .card-bottom {
+  position: relative;
+  z-index: 1;
+}
+
+.quick-card-front .card-icon {
+  align-self: flex-end;
+  font-size: 28px;
+  color: var(--accent);
+  transition: transform .4s ease;
+}
+
+.quick-card-front:hover .card-icon {
+  transform: rotate(45deg);
+}
+
+.quick-card-title {
+  display: block;
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: -.06em;
+  font-weight: 500;
+}
+
+.quick-card-description {
+  display: block;
+  max-width: 320px;
+  margin-top: 15px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.flip-hint {
+  display: inline-block;
+  margin-top: 25px;
+  color: var(--accent);
+  font-size: 10px;
+  letter-spacing: .16em;
+}
+
+/* BACK */
+
+.quick-card-back {
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  transform: rotateY(180deg);
+  background:
+    radial-gradient(ellipse at top right, rgba(7, 218, 46, .10), transparent 55%),
+    var(--card);
+}
+
+.flip-back-header {
+  margin-bottom: 16px;
+}
+
+.flip-back-header h3 {
+  margin-top: 8px;
+  font-size: clamp(1.7rem, 2.5vw, 2.3rem);
+  line-height: 1.05;
+  letter-spacing: -.05em;
+  font-weight: 500;
+}
+
+.flip-back-header h3 em {
+  color: var(--accent);
+  font-family: "Lora", serif;
+  font-weight: 400;
+}
+
+.flip-curriculum-options {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.flip-curriculum-options a {
+  display: grid;
+  grid-template-columns: 25px 1fr 16px;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 10px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 1.35;
+  background: rgba(255, 255, 255, .025);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  transition:
+    color .25s ease,
+    border-color .25s ease,
+    background .25s ease,
+    transform .25s ease;
+}
+
+.flip-curriculum-options a span:first-child {
+  color: var(--accent);
+  font-size: 10px;
+}
+
+.flip-curriculum-options a span:last-child {
+  justify-self: end;
+  color: var(--accent);
+}
+
+.flip-curriculum-options a:hover {
+  color: var(--accent);
+  background: rgba(7, 218, 46, .07);
+  border-color: var(--line-green);
+  transform: translateX(3px);
+}
+
+.flip-back-button {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 15px 0 0;
+  border: none;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  font-size: 10px;
+  letter-spacing: .13em;
+  cursor: pointer;
+  transition: color .2s ease;
+}
+
+.flip-back-button:hover {
+  color: var(--accent);
+}
+
+.quick-card-flip button:focus-visible,
+.flip-curriculum-options a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (max-width: 560px) {
+  .quick-card-flip,
+  .quick-card-flip-inner {
+    min-height: 520px;
+  }
+
+  .quick-card-front {
+    padding: 22px;
+  }
+
+  .quick-card-back {
+    padding: 16px;
+  }
+
+  .flip-curriculum-options {
+    gap: 5px;
+  }
+
+  .flip-curriculum-options a {
+    padding: 9px 7px;
+    font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quick-card-flip-inner {
+    transition: none;
+  }
+}
+
+
+/* ================================================================
+   GOAL PLANNER
+   ================================================================ */
+
+.goal-planner-section {
+  background: #06180b;
+  overflow: hidden;
+}
+
+.goal-planner-layout {
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  align-items: start;
+  gap: clamp(28px, 5vw, 76px);
+}
+
+/* LEFT: GOAL TRACKERS */
+
+.goal-tracker-panel {
+  min-width: 0;
+  padding-top: 12px;
+}
+
+.goal-tracker-panel > h3 {
+  margin-top: 16px;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 1;
+  letter-spacing: -.06em;
+  font-weight: 500;
+}
+
+.goal-tracker-panel > h3 span {
+  color: var(--green);
+}
+
+.goal-panel-description {
+  max-width: 390px;
+  margin-top: 18px;
+  margin-bottom: 35px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.goal-progress-card {
+  padding: 25px;
+  margin-bottom: 13px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, .025);
+  transition: border-color .35s ease, background .35s ease,
+              transform .35s ease;
+}
+
+.goal-progress-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(7, 218, 46, .4);
+  background: rgba(7, 218, 46, .035);
+}
+
+.goal-card-top,
+.goal-card-values,
+.goal-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.goal-card-label {
+  color: #718a7b;
+  font-size: 9px;
+  letter-spacing: .15em;
+}
+
+.goal-card-top h4 {
+  margin-top: 9px;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.goal-status {
+  padding: 7px 9px;
+  border: 1px solid rgba(7, 218, 46, .25);
+  color: var(--green);
+  font-size: 9px;
+  letter-spacing: .08em;
+  white-space: nowrap;
+}
+
+.goal-card-values {
+  margin-top: 28px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.goal-card-values strong {
+  color: var(--text);
+  font-size: 25px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.goal-progress-track {
+  height: 5px;
+  margin-top: 15px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .09);
+}
+
+.goal-progress-track span {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--green);
+  box-shadow: 0 0 14px rgba(7, 218, 46, .35);
+  transition: width 1s cubic-bezier(.2, .8, .2, 1);
+}
+
+.goal-card-bottom {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.goal-card-bottom strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.goal-note {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  margin-top: 24px;
+  padding: 20px;
+  border-left: 2px solid var(--green);
+  background: rgba(7, 218, 46, .045);
+}
+
+.goal-note-icon {
+  color: var(--green);
+  font-size: 21px;
+}
+
+.goal-note strong {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.goal-note p {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* RIGHT: CGPA CALCULATOR */
+
+.cgpa-calculator {
+  min-width: 0;
+  padding: clamp(22px, 3vw, 35px);
+  border: 1px solid rgba(7, 218, 46, .32);
+  background:
+    radial-gradient(ellipse at top right, rgba(7, 218, 46, .09), transparent 55%),
+    #07130b;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, .18);
+}
+
+.calculator-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 34px;
+}
+
+.calculator-header h3 {
+  margin-top: 10px;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 500;
+  letter-spacing: -.05em;
+}
+
+.calculator-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(7, 218, 46, .3);
+  border-radius: 50%;
+  color: var(--green);
+  font-size: 24px;
+}
+
+.calculator-field {
+  min-width: 0;
+  margin-bottom: 23px;
+}
+
+.calculator-field label {
+  display: block;
+  margin-bottom: 10px;
+  color: #82978a;
+  font-size: 10px;
+  letter-spacing: .13em;
+}
+
+.calculator-field input {
+  width: 100%;
+  min-width: 0;
+  padding: 14px 15px;
+  border: 1px solid rgba(255, 255, 255, .13);
+  border-radius: 4px;
+  outline: none;
+  background: rgba(0, 0, 0, .2);
+  color: var(--text);
+  font: inherit;
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+.calculator-field input:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(7, 218, 46, .09);
+}
+
+.calculator-field input::-webkit-inner-spin-button,
+.calculator-field input::-webkit-outer-spin-button {
+  margin: 0;
+}
+
+.calculator-field small {
+  display: block;
+  margin-top: 9px;
+  color: #718578;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.cgpa-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.cgpa-presets button {
+  padding: 7px 12px;
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: 20px;
+  background: transparent;
+  color: #c4d2c9;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  transition: color .25s ease, border-color .25s ease,
+              background .25s ease, transform .25s ease;
+}
+
+.cgpa-presets button:hover,
+.cgpa-presets button.active {
+  transform: translateY(-1px);
+  border-color: var(--green);
+  background: rgba(7, 218, 46, .1);
+  color: var(--green);
+}
+
+.calculator-input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+}
+
+.calculator-context {
+  margin: -7px 0 18px;
+  color: #84998b;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.calculator-result {
+  padding: 25px 20px;
+  border: 1px solid #13c7ef;
+  border-radius: 13px;
+  background: #08273a;
+  text-align: center;
+  transition: background .35s ease, border-color .35s ease,
+              transform .35s ease;
+}
+
+.calculator-result.result-impossible {
+  border-color: #ff5959;
+  background: #350b0b;
+}
+
+.calculator-result.result-invalid {
+  border-color: #e8b34f;
+  background: #2a210d;
+}
+
+.result-label {
+  display: block;
+  color: #a7c1d0;
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+
+.calculator-result > strong {
+  display: block;
+  margin: 11px 0;
+  color: var(--green);
+  font-size: clamp(2.3rem, 5vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  transition: color .3s ease;
+}
+
+.calculator-result.result-impossible > strong {
+  color: #ff6666;
+}
+
+.calculator-result > p {
+  color: #b5c9d5;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.result-meter {
+  margin-top: 24px;
+  text-align: left;
+}
+
+.result-meter-track {
+  position: relative;
+  height: 8px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .12);
+}
+
+.result-meter-track > span {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--green);
+  transition: width .8s cubic-bezier(.2, .8, .2, 1),
+              background .3s ease;
+}
+
+.result-meter-track > i {
+  position: absolute;
+  top: 50%;
+  width: 3px;
+  height: 15px;
+  background: #d9e5e9;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+  transition: left .8s cubic-bezier(.2, .8, .2, 1);
+}
+
+.result-meter-track > #resultBestMarker {
+  background: #fff;
+}
+
+.result-meter-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 12px;
+  color: #90a7b5;
+  font-size: 10px;
+}
+
+.result-message {
+  margin-top: 20px;
+}
+
+.calculator-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  margin-top: 15px;
+  padding: 17px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, .38);
+}
+
+.calculator-disclaimer > span {
+  flex-shrink: 0;
+  color: #91a89a;
+}
+
+.calculator-disclaimer p {
+  color: #91a89a;
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .goal-planner-layout {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .goal-tracker-panel {
+    padding-top: 0;
+  }
+
+  .cgpa-calculator {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .goal-progress-card {
+    padding: 19px;
+  }
+
+  .goal-card-top {
+    align-items: flex-start;
+  }
+
+  .goal-status {
+    font-size: 8px;
+  }
+
+  .calculator-input-grid {
+    gap: 10px;
+  }
+
+  .cgpa-calculator {
+    padding: 19px;
+  }
+
+  .calculator-result {
+    padding: 23px 14px;
+  }
+
+  .result-meter-labels {
+    font-size: 9px;
+  }
+}
+
+
+
+
