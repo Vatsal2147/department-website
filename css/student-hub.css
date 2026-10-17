@@ -1308,5 +1308,187 @@ body.hovering .cursor-ring { width: 54px; height: 54px; border-color: var(--gree
 }
 
 
+/* =====================================================
+   ACADEMICS FLIP CARD — FIX
+   ===================================================== */
+
+.quick-card-flip {
+  position: relative;
+  perspective: 1200px;
+  padding: 0;
+  overflow: visible;
+  min-height: 572px;
+}
+
+.quick-card-flip:hover {
+  transform: none;
+}
+
+.quick-card-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 572px;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.quick-card-flip.is-flipped .quick-card-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.quick-card-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 572px;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--text);
+}
+
+.quick-card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 27px;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.quick-card-front:hover {
+  border-color: var(--line-green);
+  background: var(--card-2);
+}
+
+.quick-card-front .card-number,
+.quick-card-front .card-icon {
+  position: absolute;
+  z-index: 2;
+}
+
+.quick-card-front .card-number {
+  top: 27px;
+  left: 27px;
+}
+
+.quick-card-front .card-icon {
+  top: 25px;
+  right: 25px;
+  color: var(--green);
+  font-size: 20px;
+}
+
+.quick-card-front .card-bottom {
+  margin-top: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.quick-card-title {
+  display: block;
+  margin: 10px 0 12px;
+  font-size: clamp(1.8rem, 3vw, 3.2rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+}
+
+.quick-card-description {
+  display: block;
+  max-width: 340px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.flip-hint {
+  display: block;
+  margin-top: 24px;
+  color: var(--green);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+
+.quick-card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.flip-back-header h3 {
+  margin-top: 12px;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.flip-back-header h3 em {
+  color: var(--green);
+  font-style: normal;
+}
+
+.flip-curriculum-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.flip-curriculum-options a {
+  display: grid;
+  grid-template-columns: 28px 1fr 16px;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.2s ease;
+}
+
+.flip-curriculum-options a:hover {
+  color: var(--green);
+}
+
+.flip-curriculum-options a span:first-child {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.flip-curriculum-options a span:last-child {
+  color: var(--green);
+}
+
+.flip-back-button {
+  align-self: flex-start;
+  flex-shrink: 0;
+  margin-top: 16px;
+  padding: 10px 0;
+  border: 0;
+  background: transparent;
+  color: var(--green);
+  font: inherit;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quick-card-flip-inner {
+    transition: none;
+  }
+}
+
 
 

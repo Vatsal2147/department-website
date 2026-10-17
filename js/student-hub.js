@@ -1035,3 +1035,47 @@ if (
 
 });
 
+
+/* =========================================================
+   COURSES & SYLLABUS FLIP CARD
+   ========================================================= */
+
+(() => {
+  function initCoursesFlipCard() {
+    const card = document.getElementById("coursesFlipCard");
+    const frontButton = document.getElementById("coursesFlipButton");
+    const backButton = document.getElementById("coursesFlipBack");
+
+    if (!card || !frontButton || !backButton) {
+      console.error("Flip card elements not found:", {
+        card,
+        frontButton,
+        backButton
+      });
+      return;
+    }
+
+    function setFlipped(flipped) {
+      card.classList.toggle("is-flipped", flipped);
+      frontButton.setAttribute("aria-expanded", String(flipped));
+
+      console.log("Flip card state:", flipped);
+    }
+
+    frontButton.addEventListener("click", () => {
+      setFlipped(true);
+    });
+
+    backButton.addEventListener("click", () => {
+      setFlipped(false);
+    });
+
+    console.log("Flip card initialized successfully.");
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initCoursesFlipCard);
+  } else {
+    initCoursesFlipCard();
+  }
+})();

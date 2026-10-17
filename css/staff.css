@@ -686,3 +686,168 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* =========================================
+   COMPACT STAFF CARDS
+   Keeps the image height unchanged at 380px
+   ========================================= */
+
+/* Fit more cards into each row */
+.faculty-list {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.faculty-card {
+  grid-column: span 4;
+  border-radius: 18px;
+}
+
+/* Preserve existing image dimensions */
+.faculty-card .card-media {
+  height: 380px;
+}
+
+/* Reduce empty space around staff details */
+.faculty-card .card-content {
+  padding: 1.25rem;
+  justify-content: flex-start;
+}
+
+/* Tighten the header */
+.faculty-card .card-header {
+  margin-bottom: 0.6rem;
+}
+
+.faculty-card .faculty-id {
+  font-size: 0.72rem;
+}
+
+/* Make staff names more compact */
+.faculty-card .faculty-name {
+  font-size: 1.45rem;
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+}
+
+/* Reduce spacing inside phone/email information */
+.faculty-card .info-grid {
+  gap: 0.75rem;
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+}
+
+.faculty-card .info-label {
+  font-size: 0.68rem;
+}
+
+.faculty-card .info-val {
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+/* Reduce space above the profile link */
+.faculty-card .card-action {
+  padding-top: 0.75rem;
+}
+
+/* Tablet: two cards per row */
+@media (max-width: 1024px) {
+  .faculty-card {
+    grid-column: span 6;
+  }
+}
+
+/* Mobile: one card per row */
+@media (max-width: 640px) {
+  .faculty-card {
+    grid-column: span 12;
+  }
+
+  .faculty-card .card-content {
+    padding: 1rem;
+  }
+}
+
+/* Match staff card grid to the faculty page */
+.faculty-list {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.faculty-card {
+  grid-column: span 3;
+  border-radius: 18px;
+}
+
+/* Keep staff image height unchanged */
+.faculty-card .card-media {
+  height: 220px;
+}
+
+/* Compact text area */
+.faculty-card .card-content {
+  padding: 1.1rem;
+  justify-content: flex-start;
+}
+
+.faculty-card .card-header {
+  margin-bottom: 0.6rem;
+}
+
+.faculty-card .faculty-name {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  margin-bottom: 0.3rem;
+}
+
+.faculty-card .faculty-designation {
+  font-size: 0.85rem;
+  margin-bottom: 0.65rem;
+}
+
+.faculty-card .info-grid {
+  gap: 0.65rem 0.8rem;
+  padding: 0.8rem;
+  margin-bottom: 0.85rem;
+  border-radius: 12px;
+}
+
+.faculty-card .info-label {
+  font-size: 0.68rem;
+}
+
+.faculty-card .info-val {
+  font-size: 0.78rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.faculty-card .card-action {
+  padding-top: 0.75rem;
+}
+
+/* Responsive layout */
+@media (max-width: 1200px) {
+  .faculty-card {
+    grid-column: span 4;
+  }
+}
+
+@media (max-width: 900px) {
+  .faculty-card {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 600px) {
+  .faculty-card {
+    grid-column: span 12;
+  }
+
+  .faculty-card .card-content {
+    padding: 1rem;
+  }
+}

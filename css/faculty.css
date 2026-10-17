@@ -951,7 +951,7 @@ body {
 .faculty-card .btn-homepage:hover {
   background: rgba(7, 218, 46, 0.12);
   border-color: #07da2e;
-  color: #eaff03;
+  color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 0 16px rgba(7, 218, 46, 0.1);
 }
@@ -996,3 +996,135 @@ body {
   }
 }
 
+/* Faculty photos: taller, wider, head-friendly framing */
+.faculty-card .card-media {
+  height: 300px;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.faculty-card .card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .faculty-card .card-media {
+    height: 280px;
+  }
+}
+
+/* =========================================
+   FACULTY GRID — ALIGNMENT FIX
+   ========================================= */
+
+.faculty-list {
+  align-items: stretch;
+}
+
+.faculty-card {
+  align-self: stretch;
+  margin-top: 0;
+  transform: none;
+}
+
+/* Keep the HOD card aligned with the others */
+.faculty-card.featured {
+  align-self: stretch;
+  margin-top: 0;
+  transform: none;
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================
+   HOD CARD — DISTINCT PREMIUM STYLING
+   ========================================= */
+
+.faculty-card.featured {
+  border: 1px solid rgba(7, 218, 46, 0.35);
+  box-shadow: 0 0 0 rgba(7, 218, 46, 0);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* Subtle green accent along the top */
+.faculty-card.featured::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 12%;
+  width: 76%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #07da2e,
+    #ffffff,
+    #07da2e,
+    transparent
+  );
+  opacity: 0.8;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+/* Premium hover effect */
+.faculty-card.featured:hover {
+  transform: translateY(-6px) scale(1.025);
+  border-color: #07da2e;
+  box-shadow:
+    0 12px 36px rgba(7, 218, 46, 0.13),
+    0 0 20px rgba(7, 218, 46, 0.08);
+  z-index: 5;
+}
+
+.faculty-card.featured:hover::before {
+  opacity: 1;
+}
+
+/* Keep the hover effect accessible */
+@media (prefers-reduced-motion: reduce) {
+  .faculty-card.featured,
+  .faculty-card.featured::before {
+    transition: none;
+  }
+
+  .faculty-card.featured:hover {
+    transform: none;
+  }
+}
+
+/* Temporarily force the HOD card to align with the first row */
+.faculty-card.featured {
+  margin-block: 0 !important;
+  top: auto !important;
+  translate: none !important;
+  transform: none !important;
+  align-self: stretch;
+}
+
+/* HOD faculty card — give the portrait more room */
+.faculty-card.featured .card-media {
+  height: 380px;
+  overflow: hidden;
+}
+
+.faculty-card.featured .card-media .faculty-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .faculty-card.featured .card-media {
+    height: 350px;
+  }
+}
