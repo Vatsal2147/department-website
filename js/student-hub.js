@@ -1040,41 +1040,101 @@ if (
    COURSES & SYLLABUS FLIP CARD
    ========================================================= */
 
-(() => {
+/* ========================================
+   COURSES & SYLLABUS FLIP CARD
+======================================== */
+
+/* ========================================
+   ACADEMICS & SYLLABUS FLIP CARD
+   Front <-> Back
+======================================== */
+
+(function () {
   function initCoursesFlipCard() {
     const card = document.getElementById("coursesFlipCard");
     const frontButton = document.getElementById("coursesFlipButton");
     const backButton = document.getElementById("coursesFlipBack");
 
+    // Stop if the required HTML elements do not exist.
     if (!card || !frontButton || !backButton) {
-      console.error("Flip card elements not found:", {
-        card,
-        frontButton,
-        backButton
-      });
+      console.error(
+        "Academics flip card: Could not find the required HTML elements."
+      );
       return;
     }
 
-    function setFlipped(flipped) {
-      card.classList.toggle("is-flipped", flipped);
-      frontButton.setAttribute("aria-expanded", String(flipped));
+    const backFace = card.querySelector(".quick-card-back");
 
-      console.log("Flip card state:", flipped);
+    if (!backFace) {
+      console.error(
+        "Academics flip card: .quick-card-back element was not found."
+      );
+      return;
     }
 
-    frontButton.addEventListener("click", () => {
+    const curriculumLinks = backFace.querySelectorAll("a");
+
+    // Avoid attaching duplicate listeners.
+    if (card.dataset.flipInitialized === "true") {
+      return;
+    }
+
+    card.dataset.flipInitialized = "true";
+
+    /**
+     * Controls the card's front/back state.
+     * true  = show back
+     * false = show front
+     */
+    function setFlipped(isFlipped) {
+      card.classList.toggle("is-flipped", isFlipped);
+
+      frontButton.setAttribute(
+        "aria-expanded",
+        String(isFlipped)
+      );
+
+      backFace.setAttribute(
+        "aria-hidden",
+        String(!isFlipped)
+      );
+
+      // Manage keyboard navigation.
+      frontButton.tabIndex = isFlipped ? -1 : 0;
+      backButton.tabIndex = isFlipped ? 0 : -1;
+
+      curriculumLinks.forEach((link) => {
+        link.tabIndex = isFlipped ? 0 : -1;
+      });
+    }
+
+    // FRONT -> BACK
+    frontButton.addEventListener("click", function (event) {
+      event.preventDefault();
       setFlipped(true);
     });
 
-    backButton.addEventListener("click", () => {
+    // BACK -> FRONT
+    backButton.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
       setFlipped(false);
+
+      // Return keyboard focus to the front button.
+      frontButton.focus();
     });
 
-    console.log("Flip card initialized successfully.");
+    // Initial state: show the front.
+    setFlipped(false);
   }
 
+  // Supports scripts loaded before or after the DOM is ready.
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initCoursesFlipCard);
+    document.addEventListener(
+      "DOMContentLoaded",
+      initCoursesFlipCard
+    );
   } else {
     initCoursesFlipCard();
   }

@@ -383,7 +383,35 @@ const facultyProfiles = {
       'PFAS removal and degradation',
       'Membrane and nanoparticle synthesis'
     ]
-  }
+  },
+  "prof-sharada-navada": {
+  name: "Prof. Sharada Navada",
+  designation: "Assistant Professor",
+  department: "Environmental Science and Engineering",
+  category: "Core Faculty",
+
+  photo: "./photos/SN.jpg",
+
+  location: "510, ESED-DESE Building",
+  phone: "+91-22-21593809",
+  email: "sharada.navada@iitb.ac.in",
+
+ education: [
+  'Industrial Ph.D. (Department of Chemistry), Norwegian University of Science and Technology (NTNU), Trondheim, Norway (2017–2021). Thesis: Salinity acclimation strategies for nitrifying bioreactors in recirculating aquaculture systems',
+  'M.Sc. in Civil & Environmental Engineering, Carnegie Mellon University, Pittsburgh, PA, USA (2012–2013)',
+  'B.Tech. in Chemical Engineering (Honors) with Minor in Computer Science, IIT Bombay, Mumbai, India (2008–2012)'
+],
+
+research: [
+  'Recirculating aquaculture systems',
+  'Biofilms',
+  'Water treatment',
+  'Microbial ecology'
+],
+
+  homepage: "https://www.esed.iitb.ac.in/faculty/sharada-navada#personal"
+},
+
 };
 
 const page = document.getElementById('profilePage');
