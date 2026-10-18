@@ -1219,3 +1219,39 @@ footer a {
   }
 }
 
+
+@media (max-width: 600px) {
+  .hero-visual {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0 !important;
+    border: none !important;
+    background: none !important;
+    overflow: visible;
+  }
+
+  .hero-visual::before,
+  .hero-visual::after {
+    display: none !important;
+  }
+
+  #three-container {
+    height: auto !important;
+    min-height: 0 !important;
+    border: none !important;
+    background: none !important;
+  }
+
+  #three-container img {
+    display: block;
+    width: 100%;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 8px;
+  }
+
+  .visual-label {
+    display: none;
+  }
+}
+
