@@ -2764,3 +2764,12 @@ body.hovering .custom-cursor-follower {
   }
 }
 
+@media (max-width: 768px) {
+  #hero .hero-title-accent {
+    left: 0 !important;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+

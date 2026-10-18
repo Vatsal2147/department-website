@@ -1166,3 +1166,56 @@ footer a {
   }
 }
 
+/* Fix: show the complete group photo on mobile */
+@media (max-width: 600px) {
+  #three-container {
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
+    overflow: hidden;
+  }
+
+  #three-container img {
+    display: block;
+    width: 100%;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center;
+  }
+}
+
+/* Compact council cards on mobile */
+@media (max-width: 600px) {
+  .council-grid {
+    gap: 12px;
+  }
+
+  .member-card {
+    padding: 5px;
+  }
+
+  .member-photo {
+    height: 160px !important;
+    min-height: 0 !important;
+    flex-shrink: 0;
+  }
+
+  .member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain !important;
+    object-position: center;
+  }
+
+  .member-info {
+    padding: 12px 6px 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .member-photo {
+    height: 135px !important;
+  }
+}
+
