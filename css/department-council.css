@@ -1255,3 +1255,16 @@ footer a {
   }
 }
 
+/* ESED green text selection */
+::selection {
+  background: #07da2e;
+  color: #061e0d;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: #07da2e;
+  color: #061e0d;
+  text-shadow: none;
+}
+
