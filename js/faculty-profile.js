@@ -4,7 +4,7 @@
 const facultyProfiles = {
   'prof-munish-chandel': {
     name: 'Prof. Munish Chandel',
-    role: 'Professor & Head, ESED',
+    role: 'Head Of Department & Professor, ESED',
     photo: './photos/munish.chandel.jpg',
     room: '411, Environmental Research Laboratory (ERL), ESED-DESE Building',
     phone: '+91-22-25767856',

@@ -63,65 +63,6 @@ input {
   margin: 0 auto;
 }
 
-/* NAVBAR — intentionally aligned with the existing ESED site */
-.site-navbar {
-  position: fixed;
-  inset: 0 0 auto;
-  height: 76px;
-  padding: 0 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: rgba(7, 13, 11, 0.82);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(132, 166, 150, 0.12);
-  z-index: 1000;
-}
-.nav-logo a {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-}
-.logo-main {
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  color: #f1f5f2;
-}
-.logo-sub {
-  margin-top: 4px;
-  font-size: 9px;
-  letter-spacing: 0.25em;
-  color: var(--green);
-}
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-.nav-links a {
-  position: relative;
-  color: #91a39a;
-  font-size: 14px;
-  padding: 28px 0;
-  transition: color 0.3s ease;
-  white-space: nowrap;
-}
-.nav-links a:hover,
-.nav-links a.active {
-  color: #f1f5f2;
-}
-.nav-links a.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 17px;
-  height: 2px;
-  background: var(--green);
-}
-
 /* CURSOR */
 .cursor-dot {
   position: fixed;
@@ -663,6 +604,7 @@ body.hovering .cursor-ring {
 .opportunity-card:hover {
   transform: translateY(-6px);
   border-color: var(--line-green);
+  color: var(--green-bright)
 }
 .opportunity-card.hidden {
   display: none;
@@ -946,12 +888,7 @@ body.hovering .cursor-ring {
 }
 
 @media (max-width: 760px) {
-  .site-navbar {
-    padding: 0 20px;
-  }
-  .nav-links {
-    display: none;
-  }
+  
   .hero-inner {
     padding-top: 145px;
   }

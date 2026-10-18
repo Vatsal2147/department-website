@@ -851,3 +851,19 @@ body {
     padding: 1rem;
   }
 }
+
+.staff-page .esed-footer {
+  margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  .staff-page .esed-footer {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .staff-page .esed-footer {
+    margin-top: 40px;
+  }
+}

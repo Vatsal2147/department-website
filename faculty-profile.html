@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/png" href="./photos/fav2.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#061e0d" />
@@ -8,15 +9,50 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/footer.css" />
   <link rel="stylesheet" href="./css/faculty-profile.css" />
   <link rel="stylesheet" href="./css/navbar.css" />
 </head>
 <body>
+  <header class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="nav-brand-group">
+  <a href="./index.html" class="institute-logo">
+    <img src="./photos/iitb.png" alt="IIT Bombay">
+  </a>
+
+  <a href="./index.html" class="brand-logo">
+    <span class="logo-accent">ESED</span>
+    <span class="logo-sub">IIT BOMBAY</span>
+  </a>
+</div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="./index.html" class="nav-link ">About</a>
+      <a href="./history.html" class="nav-link ">Our History</a>
+      <a href="./faculty.html" class="nav-link active">Faculty</a>
+      <a href="./staff.html" class="nav-link">Staff</a>
+      <a href="./courses.html" class="nav-link">Courses</a>
+      <a href="./student-hub.html" class="nav-link">Student Hub</a>
+      <a href="./student-projects.html" class="nav-link">Projects</a>
+      <a href="./department-council.html" class="nav-link">Council</a>
+    </nav>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="navLinks"
+      type="button"
+    >
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
   <div class="profile-cursor" aria-hidden="true"></div>
-  <header class="profile-topbar">
-    <a class="brand" href="./faculty.html"><span class="brand-mark">◇</span><span>ESED <i>/ IITB</i></span></a>
-    <a class="back-link" href="./faculty.html">← <span>All faculty</span></a>
-  </header>
+  
   <main class="profile-page" id="profilePage">
     <div class="profile-loading">Loading faculty profile…</div>
   </main>

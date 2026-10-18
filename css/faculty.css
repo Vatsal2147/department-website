@@ -119,48 +119,10 @@ body {
   margin: 0 auto;
 }
 
-.brand-logo {
-  position: fixed;
-  left: 140px;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  text-decoration: none;
-  color: var(--text-main);
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1.25rem;
-  letter-spacing: -0.02em;
-}
 
-.brand-logo .logo-mark {
-  color: var(--accent-emerald);
-  font-size: 1.4rem;
-}
 
-.brand-logo .logo-text span {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  font-weight: 500;
-}
 
-.main-nav {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-}
 
-.nav-link {
-  color: var(--text-muted);
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover, .nav-link.active {
-  color: var(--accent-emerald);
-}
 
 .btn-pill {
   padding: 0.55rem 1.4rem;
@@ -682,9 +644,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .main-nav {
-    display: none;
-  }
+
   .hero-grid-footer {
     grid-template-columns: 1fr;
   }
@@ -1126,5 +1086,21 @@ body {
 @media (max-width: 768px) {
   .faculty-card.featured .card-media {
     height: 350px;
+  }
+}
+
+.faculty-page .esed-footer {
+  margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  .faculty-page .esed-footer {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faculty-page .esed-footer {
+    margin-top: 40px;
   }
 }

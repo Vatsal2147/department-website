@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="./photos/fav2.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#061e0d" />
+  <title>Student Projects | ESED IIT Bombay</title>
+
+  <!-- Use your existing typography if already loaded by your site -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:opsz,wght@17..18,400..700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/student-projects.css" />
+  <link rel="stylesheet" href="./css/navbar.css" />
+</head>
+<body>
+     <header class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="nav-brand-group">
+  <a href="./index.html" class="institute-logo">
+    <img src="./photos/iitb.png" alt="IIT Bombay">
+  </a>
+
+  <a href="./index.html" class="brand-logo">
+    <span class="logo-accent">ESED</span>
+    <span class="logo-sub">IIT BOMBAY</span>
+  </a>
+</div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="./index.html" class="nav-link ">About</a>
+      <a href="./history.html" class="nav-link">Our History</a>
+      <a href="./faculty.html" class="nav-link">Faculty</a>
+      <a href="./staff.html" class="nav-link">Staff</a>
+      <a href="./courses.html" class="nav-link ">Courses</a>
+      <a href="./student-hub.html" class="nav-link  ">Student Hub</a>
+      <a href="./student-projects.html" class="nav-link active">Projects</a>
+      <a href="./department-council.html" class="nav-link">Council</a>
+    </nav>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="navLinks"
+      type="button"
+    >
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+  <div class="page-noise" aria-hidden="true"></div>
+
+
+  <main>
+    
+
+    <section class="archive-section" id="project-archive">
+      <div class="archive-heading reveal-up">
+        <div>
+          <span class="section-label">01 // THE ARCHIVE</span>
+          <h2>What students<br /><em>are building</em></h2>
+        </div>
+        <p>
+          From environmental data to field-ready solutions, explore the work
+          happening across our student community.
+        </p>
+      </div>
+
+      <div class="archive-toolbar reveal-up">
+        <div class="filter-list" role="group" aria-label="Filter projects">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All work <span>07</span></button>
+          <button class="filter-btn" data-filter="air" aria-pressed="false">Air quality</button>
+          <button class="filter-btn" data-filter="water" aria-pressed="false">Water</button>
+          <button class="filter-btn" data-filter="climate" aria-pressed="false">Climate</button>
+          <button class="filter-btn" data-filter="ecology" aria-pressed="false">Ecology</button>
+          <button class="filter-btn" data-filter="technology" aria-pressed="false">Technology</button>
+        </div>
+        <span class="results-count" aria-live="polite">07 PROJECTS</span>
+      </div>
+
+      
+<div class="project-grid" id="project-grid" aria-live="polite">
+  <!-- Project cards are generated from student-projects.json -->
+</div>
+
+<div class="empty-state" id="empty-state" hidden>
+  No projects in this category yet.
+  <button class="reset-filters" type="button">Show all projects ↗</button>
+</div>
+
+
+      <div class="empty-state" hidden>
+        No projects in this category yet. Explore all student work instead.
+        <button class="reset-filters">Show all projects ↗</button>
+      </div>
+
+      <section class="project-submit reveal-up">
+        <div class="submit-decoration" aria-hidden="true">+</div>
+        <span class="section-label">02 // YOUR WORK BELONGS HERE</span>
+        <div class="submit-content">
+          <h2>Working on something<br /><em>worth sharing?</em></h2>
+          <div class="submit-action">
+            <p>Research, prototypes, field studies or a project still in progress — we want to hear about it.</p>
+            <a class="submit-button" href="mailto:esed@iitb.ac.in?subject=Student%20project%20submission">
+              Submit your project <span>↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+  <script src="./js/student-projects.js"></script>
+
+  
+<footer class="esed-footer">
+  <div class="footer-main">
+    <div class="footer-contact">
+     <a class="brand" href="index.html" aria-label="ESED IIT Bombay home">
+  <img src="./photos/iitb.png" alt="IIT Bombay logo" class="iitb-logo">
+  <span class="brand-name">
+    <strong>ESED</strong>
+    <small>ENVIRONMENTAL SCIENCE & ENGINEERING</small>
+  </span>
+</a>
+
+
+      <address class="footer-address">
+        IIT Bombay, Powai,<br />
+        Mumbai, Maharashtra, India
+      </address>
+
+      <a class="footer-email" href="mailto:esed@iitb.ac.in">
+        esed@iitb.ac.in
+      </a>
+
+      <div class="footer-socials">
+        <a href="#" aria-label="Instagram">IG <span>↗</span></a>
+        <a href="#" aria-label="LinkedIn">IN <span>↗</span></a>
+        <a href="#" aria-label="YouTube">YT <span>↗</span></a>
+      </div>
+    </div>
+
+    <div class="footer-links-column">
+      <span class="footer-heading">EXPLORE</span>
+      <nav class="footer-links" aria-label="Department links">
+        <a href="faculty.html">Faculty</a>
+        <a href="student-projects.html">Projects</a>
+        <a href="student-hub.html">Student hub</a>
+        <a href="courses.html">Courses</a>
+        <a href="department-council.html">Department council</a>
+      </nav>
+    </div>
+
+    <div class="footer-links-column">
+      <span class="footer-heading">ACADEMICS</span>
+      <nav class="footer-links" aria-label="Academic links">
+        <a href="courses.html">B.Tech</a>
+        <a href="courses.html">M.Tech</a>
+        <a href="courses.html">Ph.D.</a>
+        <a href="mailto:esed@iitb.ac.in">Research enquiries</a>
+        <a href="mailto:esed@iitb.ac.in">Get in touch</a>
+      </nav>
+    </div>
+
+    <div class="footer-map-column">
+      <span class="footer-heading">FIND US</span>
+      <a
+        class="footer-map"
+        href="https://www.google.com/maps/search/?api=1&query=Department+of+Environmental+Science+and+Engineering+IIT+Bombay"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open ESED IIT Bombay location in Google Maps"
+      >
+        <iframe
+          title="IIT Bombay location map"
+         src="https://maps.google.com/maps?q=19.1302632,72.9188011&z=19&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
+        
+      </a>
+      <p class="map-caption">INDIAN INSTITUTE OF TECHNOLOGY BOMBAY · POWAI</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 ESED · IIT BOMBAY</span>
+    <a href="https://www.iitb.ac.in/" target="_blank" rel="noopener noreferrer">
+      IIT BOMBAY <span>↗</span>
+    </a>
+  </div>
+</footer>
+
+</body>
+</html>
