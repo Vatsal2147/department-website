@@ -1196,7 +1196,7 @@ footer a {
   }
 
   .member-photo {
-    height: 160px !important;
+    height: 100px !important;
     min-height: 0 !important;
     flex-shrink: 0;
   }
@@ -1266,5 +1266,51 @@ footer a {
   background: #07da2e;
   color: #061e0d;
   text-shadow: none;
+}
+
+@media (min-width: 901px) {
+  .hero {
+    grid-template-columns: minmax(280px, 0.7fr) 1.3fr;
+  }
+
+  .hero-visual {
+    width: 100%;
+  }
+}
+
+/* Department Council — consistent, shorter photo frames */
+.member-photo {
+  height: 300px !important;
+  min-height: 0 !important;
+  overflow: hidden;
+  position: relative;
+}
+
+.member-photo .photo-placeholder {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.member-photo .photo-placeholder img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .member-photo {
+    height: 240px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .member-photo {
+    height: 160px !important;
+  }
 }
 

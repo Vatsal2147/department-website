@@ -126,9 +126,11 @@ body.hovered .cursor-ring {
    ========================================================================== */
 .hero-section {
     min-height: 100vh;
-    padding: 180px 48px 30px 10px;
-    max-width: 1400px;
+    padding: 180px 48px 30px;
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -184,9 +186,10 @@ body.hovered .cursor-ring {
    STATS BAR
    ========================================================================== */
 .stats-bar {
-    border-top: 1px solid var(--border-glass);
-    padding-top: 40px;
+    width: 100%;
+    padding: 40px 48px 0;
     margin-top: 40px;
+    box-sizing: border-box;
 }
 
 .stats-grid {
@@ -294,4 +297,37 @@ body.hovered .cursor-ring {
 
 .footer-links a:hover {
     color: var(--accent-gold);
+}
+
+/* Fix horizontal spacing on the History page */
+.history-hero,
+.history-stats,
+.history-content,
+.history-section {
+  padding-left: clamp(60px, 4vw, 64px);
+  padding-right: clamp(60px, 4vw, 64px);
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 130px 20px 24px;
+    }
+
+    .stats-bar {
+        padding: 30px 20px 0;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 20px;
+    }
+
+    .history-story-section {
+        padding: 80px 20px;
+    }
+
+    .site-footer {
+        padding: 32px 20px;
+    }
 }
